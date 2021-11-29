@@ -1,6 +1,8 @@
 ---
 title: "Generative Art"
+date: 2021-05-31 12:00:00 -0500
 summary: "Programs that make pretty pictures."
+tags: ["python", "art"]
 ---
 
 ## [Mag Field](https://github.com/tgiv014/mag_field)

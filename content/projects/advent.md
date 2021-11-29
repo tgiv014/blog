@@ -1,6 +1,8 @@
 ---
 title: "Advent of Code"
+date: 2020-12-01 12:00:00 -0500
 summary: "My Advent of Code Solutions"
+tags: ["golang"]
 ---
 
 Starting in 2020, I've made it a personal goal to complete Advent of Code in a new language every year. In 2020, I kicked this tradition off with Golang.

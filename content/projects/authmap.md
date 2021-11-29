@@ -1,6 +1,8 @@
 ---
 title: "Authmap"
+date: 2021-02-06 12:00:00 -0500
 summary: "A service that geolocates unwanted SSH attempts."
+tags: ["golang", "ssh", "linux"]
 ---
 
 ![Authmap Image](/img/authmap.png)
