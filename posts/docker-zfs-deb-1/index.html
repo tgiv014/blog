@@ -1,0 +1,276 @@
+<!doctype html><html lang=en><head>
+<meta charset=utf-8>
+<meta http-equiv=content-language content="en">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Docker & ZFS On Debian &#183; mntn.dev</title>
+<meta name=title content="Docker & ZFS On Debian &#183; mntn.dev">
+<meta name=description content>
+<link rel=canonical href=https://mntn.dev/posts/docker-zfs-deb-1/>
+<link type=text/css rel=stylesheet href=/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK+uxc8yk2csLelasbP+FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA==">
+<link type=text/css rel=stylesheet href=/css/compiled/main.min.4076b9cf114dd23cca017f3365e2205a4c9a4b2c0ef4193ccd08883f76e554aa40f674a8f6e77a1b2895be0975ba8e019b0c59996c2eea32e4970ca4d5221653.css integrity="sha512-QHa5zxFN0jzKAX8zZeIgWkyaSywO9Bk8zQiIP3blVKpA9nSo9ud6GyiVvgl1uo4BmwxZmWwu6jLklwyk1SIWUw==">
+<script>function loadPreferredAppearance(){localStorage.preferredAppearance==="dark"||!("preferredAppearance"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function setPreferredAppearance(a){a=="default"?localStorage.removeItem("preferredAppearance"):localStorage.preferredAppearance=a,loadPreferredAppearance()}loadPreferredAppearance(),window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance)</script>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<meta property="og:title" content="Docker & ZFS On Debian">
+<meta property="og:description" content="How&rsquo;d we Get Here&mldr; # A while back, I snagged a Dell R710 from Ebay for $350 delivered.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mntn.dev/posts/docker-zfs-deb-1/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2020-10-03T09:45:00-05:00">
+<meta property="article:modified_time" content="2020-10-03T09:45:00-05:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Docker & ZFS On Debian">
+<meta name=twitter:description content="How&rsquo;d we Get Here&mldr; # A while back, I snagged a Dell R710 from Ebay for $350 delivered.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Posts","name":"Docker \u0026 ZFS On Debian","headline":"Docker \u0026 ZFS On Debian","description":"How\u0026rsquo;d we Get Here\u0026hellip; # A while back, I snagged a Dell R710 from Ebay for $350 delivered.","inLanguage":"en","author":{"@type":"Person","name":"Thomas Gorham"},"creator":{"@type":"Person","name":"Thomas Gorham"},"copyrightHolder":"Thomas Gorham","copyrightYear":"2020","dateCreated":"2020-10-03T09:45:00-05:00","datePublished":"2020-10-03T09:45:00-05:00","dateModified":"2020-10-03T09:45:00-05:00","url":"https:\/\/mntn.dev\/posts\/docker-zfs-deb-1\/","wordCount":"1204","keywords":["hosting","docker","zfs","linux","debian"]}</script>
+<meta name=generator content="Hugo 0.89.4">
+<meta name=author content="Thomas Gorham">
+<link href=mailto:tom@mntn.dev rel=me>
+<link href=https://github.com/tgiv014 rel=me>
+<link href=https://instagram.com/tgorham4 rel=me>
+<link href=https://www.linkedin.com/in/thomas-gorham/ rel=me>
+<link href=https://twitter.com/TGorhamIV rel=me>
+</head>
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-800 dark:text-neutral">
+<div>
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" rel=me href=/>mntn.dev</a>
+</div>
+<nav>
+<ul class="flex flex-col list-none sm:flex-row">
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/posts/ title=Posts>Blog</a>
+</li>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/projects/ title=Projects>Projects</a>
+</li>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/categories/ title=Categories>Categories</a>
+</li>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/tags/ title=Tags>Tags</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=flex-grow>
+<article class=max-w-prose>
+<header>
+<h1 class="mt-0 text-4xl font-extrabold text-neutral-800 dark:text-neutral">
+Docker & ZFS On Debian
+      </h1>
+<div class="mt-8 mb-12 text-base text-neutral-400 dark:text-neutral-500">
+<div class="flex flex-row items-center">
+<time datetime="2020-10-03 09:45:00 -0500 -0500">3 October 2020</time><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">6 mins</span>
+</div>
+</div>
+</header>
+<section class="prose dark:prose-light">
+<p><img src=/img/zfs_docker_debian.png alt="ZFS Docker and Debian Icons"></p>
+<h1 id=howd-we-get-here>How&rsquo;d we Get Here&mldr; <a class=heading-anchor href=#howd-we-get-here aria-label=Anchor>#</a></h1>
+<p>A while back, I snagged a Dell R710 from Ebay for $350 delivered. This thing is a virtualization <em>monster</em>. 8 cores and 144GB of ECC RAM, perfect for filling with bhyve virtual machines on FreeNAS. This setup worked great for me until I became interested in Docker containers. FreeNAS just doesn&rsquo;t support a docker environment, so let&rsquo;s build something from the ground up and document the process.</p>
+<h1 id=constraints>Constraints <a class=heading-anchor href=#constraints aria-label=Anchor>#</a></h1>
+<ul>
+<li>Must use ZFS (no need for ZFS root)</li>
+<li>Native docker support</li>
+<li>Lightweight (no GUI, unnecessary package systems *cough cough snaps*, etc.)</li>
+</ul>
+<p>With these constraints, we know we absolutely must use Linux and we would really like a distro that has openzfs in its package control. In the past I&rsquo;ve used Ubuntu Server and ubuntu 16.04 has zfs available as a package, but I want to avoid snaps like the plague. Because of this, I&rsquo;m going to use Debian.</p>
+<h1 id=initial-setup>Initial Setup <a class=heading-anchor href=#initial-setup aria-label=Anchor>#</a></h1>
+<p>First things first, we&rsquo;re going to shut down the server and remove every drive but our desired boot drive. FreeNAS uses a flash drive as its root storage, but debian doesn&rsquo;t quite support that. In my case, I&rsquo;m going to use an old 120GB SSD in an optical drive caddy in place of the server&rsquo;s disk drive. It&rsquo;s easy enough to complete the guided install, and Debian has some pretty good installation literature:</p>
+<ul>
+<li><a href=https://www.debian.org/releases/stable/i386/index.en.html>Installation Guide - Long</a></li>
+<li><a href=https://www.debian.org/releases/stable/i386/apa.en.html>Installation Howto - Short</a></li>
+</ul>
+<p>I do have a few gotchas during the guided install:</p>
+<ul>
+<li>Some NICs require closed-source firmware to operate. The NIC in my R710 is one of those, so I had to use the <a href=https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/>non-free debian image</a>.</li>
+<li>Guided partitioning failed for my install. I suspect that this is because it was trying to make a gigantic swap partition to match the 144GB of RAM. I decided not to use a swap partition and partition the entire SSD as <code>/</code>.</li>
+<li>I avoided giving root a password. Instead, I have an administrator user with sudo access.</li>
+<li>I did not install any desktop environments or X server components.</li>
+<li>Don&rsquo;t forget to select openssh!</li>
+</ul>
+<h1 id=post-install>Post-Install <a class=heading-anchor href=#post-install aria-label=Anchor>#</a></h1>
+<p>Now that we have a fully running debian system, let&rsquo;s change a few things. Pop all your drives back in and ssh in.</p>
+<p>Let&rsquo;s gear up to use ssh without a password, starting by setting up private key authentication. If you&rsquo;re on linux, you&rsquo;ve got it easy: <code>$ ssh-copy-id $USER@$HOST</code>. On Windows, I find it easiest to manually copy the contents of <code>%HOMEPATH%\.ssh\id_rsa.pub</code> to <code>~/.ssh/authorized_keys</code> on my server. If you don&rsquo;t have an <code>~/.ssh/id_rsa.pub</code> or <code>%HOMEPATH%\.ssh\id_rsa.pub</code>, you better generate an ssh key with <code>$ ssh-keygen</code>.</p>
+<p>Once your public key is copied in, it&rsquo;s a good idea to exit your ssh session and attempt to login with private key auth. If you don&rsquo;t need a password, you&rsquo;re on the right path. Time to disable password authentication. In <code>/etc/ssh/sshd_config</code>, find the lines containing the following keys, uncomment them and make sure they&rsquo;re set to <code>no</code>.</p>
+<pre tabindex=0><code>PasswordAuthentication no
+ChallengeResponseAuthentication no
+PermitRootLogin no
+UsePAM no
+</code></pre><p>Now you can reload sshd and bask in paswordless security strong enough to leave exposed publicly. <code>$ sudo /etc/init.d/sshd reload</code></p>
+<h1 id=zfs-time>ZFS Time <a class=heading-anchor href=#zfs-time aria-label=Anchor>#</a></h1>
+<p>Debian makes this one super easy. Check the <a href=https://wiki.debian.org/ZFS>official ZFS Debian Wiki Page</a> for more info. Use the following commands to install ZFS on Debian.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ sudo apt update
+$ sudo apt install linux-headers-<span class=sb>`</span>uname -r<span class=sb>`</span>
+$ sudo apt install -t buster-backports dkms sol-dkms
+$ sudo apt install -t buster-backports zfs-dkms zfsutils-linux
+</code></pre></div><p>It may take a little while to run the dkms build, and it may throw a few warnings. They do not specifically recommend a reboot on the Debian Wiki, but it&rsquo;s never a bad idea when dealing with kernel modules.</p>
+<p>Just for grins, if you happen to be installing on a system that used to run FreeNAS, you can try to import your old pool with <code>$ sudo zpool import</code>. You&rsquo;re likely to see <code>action: The pool can be imported using its name or numeric identifier and the '-f' flag.</code>. You can force the import by running <code>$ sudo zpool import -f $POOLNAME</code>.</p>
+<p>If you&rsquo;re starting fresh, now is the time to make your first zfs pool. I&rsquo;m in a bit of a hard drive shortage, so for testing&rsquo;s sake I will be doing a stripe pool with two 500GB hard drives. ZFS uses disk IDs or paths to reference disks instead of /dev/sdX paths. You can figure out which disk is which with the following commands:</p>
+<pre tabindex=0><code>$ ls -l /dev/disk/by-id
+$ ls -l /dev/disk/by-path
+$ lsblk -o NAME,SIZE,MODEL,VENDOR
+</code></pre><p>With the device IDs in hand, I&rsquo;ll make a zpool with:</p>
+<pre tabindex=0><code>$ sudo zpool create tank ata-ST9500325AS_6VESPM0A ata-ST9500325AS_6VESRNXY
+</code></pre><h1 id=docker-install>Docker Install <a class=heading-anchor href=#docker-install aria-label=Anchor>#</a></h1>
+<p>This is essentially a summary of the <a href=https://docs.docker.com/engine/install/debian/>Docker Docs for Debian</a>.</p>
+<ol>
+<li>Update apt and install required packages:</li>
+</ol>
+<pre tabindex=0><code>$ sudo apt update
+$ sudo apt install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+</code></pre><ol start=2>
+<li>Get Docker&rsquo;s GPG key:</li>
+</ol>
+<pre tabindex=0><code>$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+</code></pre><p>You can verify you have the correct key as follows:</p>
+<pre tabindex=0><code>$ sudo apt-key fingerprint 0EBFCD88
+pub   4096R/0EBFCD88 2017-02-22
+      Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid                  Docker Release (CE deb) &lt;docker@docker.com&gt;
+sub   4096R/F273FCD8 2017-02-22
+</code></pre><ol start=3>
+<li>Use the following command to set up Docker stable.</li>
+</ol>
+<pre tabindex=0><code>$ sudo add-apt-repository \
+   &quot;deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable&quot;
+</code></pre><ol start=4>
+<li>Finally, install docker!</li>
+</ol>
+<pre tabindex=0><code>$ sudo apt update
+$ sudo apt install docker-ce docker-ce-cli containerd-io
+</code></pre><ol start=5>
+<li>If you want to allow other users to run docker commands, you can set that up <a href=https://docs.docker.com/engine/install/linux-postinstall/>as follows</a>:</li>
+</ol>
+<pre tabindex=0><code>$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+</code></pre><p>Log out and back in</p>
+<ol>
+<li>You can verify that your docker install is functional by running <code>hello-world</code></li>
+</ol>
+<pre tabindex=0><code>$ docker run --rm hello-world
+</code></pre><h1 id=lets-hook-up-docker-and-zfs>Let&rsquo;s Hook up Docker and ZFS <a class=heading-anchor href=#lets-hook-up-docker-and-zfs aria-label=Anchor>#</a></h1>
+<p>This part&rsquo;s for the adventurous. You could certainly just make a bunch of ZFS datasets with filesystem mounts and mount those in your containers for bulk storage, but that&rsquo;s no fun! Docker has a <a href=https://docs.docker.com/storage/storagedriver/zfs-driver/>ZFS storage driver</a> that will back all container, image, and volume storage with zfs. Let&rsquo;s set it up.</p>
+<ol>
+<li>Kill docker:</li>
+</ol>
+<pre tabindex=0><code>$ sudo /etc/init.d/docker stop
+</code></pre><ol start=2>
+<li>Back up /var/lib/docker just in case and then delete its contents:</li>
+</ol>
+<pre tabindex=0><code>$ sudo cp -au /var/lib/docker /var/lib/docker.bk
+$ sudo rm -rf /var/lib/docker/*
+</code></pre><ol start=3>
+<li>Create a ZFS-backed mountpoint at <code>/var/lib/docker</code>. The official docker instructions suggest making a zpool and mounting it there, but I&rsquo;ll use a dataset since I already have a zpool configured (name <code>tank</code>).</li>
+</ol>
+<pre tabindex=0><code>$ sudo zfs create -o mountpoint=/var/lib/docker tank/docker
+</code></pre><ol start=4>
+<li>Tell Docker to use ZFS for its storage driver. In <code>/etc/docker/daemon.json</code>:</li>
+</ol>
+<pre tabindex=0><code>{
+  &quot;storage-driver&quot;: &quot;zfs&quot;
+}
+</code></pre><ol start=5>
+<li>Start docker back up and verify you&rsquo;re using the ZFS storage driver:</li>
+</ol>
+<pre tabindex=0><code>$ sudo /etc/init.d/docker start
+$ docker info
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 114
+ Server Version: 19.03.11
+ Storage Driver: zfs
+  Zpool: tank
+  Zpool Health: ONLINE
+  Parent Dataset: tank/docker
+  Space Used By Parent: 17283463680
+  Space Available: 935802788864
+  Parent Quota: no
+  Compression: off
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+</code></pre><h1 id=-done>🎉 Done! <a class=heading-anchor href=#-done aria-label=Anchor>#</a></h1>
+<p>Now we have a server running Debian with Docker using ZFS-backed storage. This would be a great way to put together a NAS setup using samba or NFS with a bunch of self-hosted services. I&rsquo;ll be using Docker to host a home assistant instance with nginx sitting in front as a reverse proxy.</p>
+</section>
+<footer class=pt-8>
+<div class=flex>
+<img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src=/img/author.jpeg>
+<div class=place-self-center>
+<div class="text-[0.6rem] leading-3 text-neutral-400 dark:text-neutral-500 uppercase">
+Author
+</div>
+<div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+Thomas Gorham
+</div>
+<div class="text-sm text-neutral-700 dark:text-neutral-400">Software Engineer @ Convictional</div>
+<div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=mailto:tom@mntn.dev target=_blank alt=Email rel="me noopener noreferrer">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at" class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154.0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458.0-184-82.542-184-184S154.542 72 256 72c100.139.0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518.0 00-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58.0-137.831 62.234-137.831 151.46.0 65.303 36.785 105.87 96 105.87 26.984.0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249.0-36.07-15.623-36.07-40.771.0-44.993 30.779-72.729 58.63-72.729 22.292.0 35.601 15.241 35.601 40.77.0 45.061-33.875 72.73-58.161 72.73z"/></svg>
+</span>
+</a>
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://github.com/tgiv014 target=_blank alt=Github rel="me noopener noreferrer">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentcolor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+</a>
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://instagram.com/tgorham4 target=_blank alt=Instagram rel="me noopener noreferrer">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M224.1 141c-63.6.0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1.0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9.0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9.0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9.0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9.0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8.0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</span>
+</a>
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://www.linkedin.com/in/thomas-gorham/ target=_blank alt=Linkedin rel="me noopener noreferrer">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span>
+</a>
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://twitter.com/TGorhamIV target=_blank alt=Twitter rel="me noopener noreferrer">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645.0 138.72-105.583 298.558-298.558 298.558-59.452.0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055.0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421.0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391.0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04.0-57.828 46.782-104.934 104.934-104.934 30.213.0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 article-pagination">
+<hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+<div class="flex justify-between pt-3">
+<span>
+<a class=flex href=/posts/project-euler-15/>
+<span class="mr-3 article-pagination-direction">&larr;</span>
+<span class="flex flex-col">
+<span class="article-pagination-title mt-[0.1rem] leading-6">Project Euler Problem #15</span>
+<span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
+<time datetime="2020-11-13 17:00:00 -0500 -0500">13 November 2020</time>
+</span>
+</span>
+</a>
+</span>
+<span>
+</span>
+</div>
+</div>
+</footer>
+</article>
+</main><footer class=py-10>
+<div class="flex justify-between">
+<div>
+<p class="text-sm text-neutral-400 dark:text-neutral-500">
+&copy;
+2021
+Thomas Gorham
+</p>
+<p class="text-xs text-neutral-300 dark:text-neutral-600">
+Powered by <a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank rel="noopener noreferrer">Congo</a>
+</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
