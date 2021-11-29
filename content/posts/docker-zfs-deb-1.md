@@ -3,6 +3,7 @@ title:  "Docker & ZFS On Debian"
 date:   2020-10-03 9:45:00 -0500
 categories: ["Homelab"]
 tags: ["hosting", "docker", "zfs", "linux", "debian"]
+summary: "A look at the setup of my home server."
 ---
 
 ![ZFS Docker and Debian Icons](/img/zfs_docker_debian.png)

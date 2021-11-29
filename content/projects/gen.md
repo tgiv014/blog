@@ -1,5 +1,6 @@
 ---
 title: "Generative Art"
+summary: "Programs that make pretty pictures."
 ---
 
 ## [Mag Field](https://github.com/tgiv014/mag_field)

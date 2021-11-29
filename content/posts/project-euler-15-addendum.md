@@ -3,6 +3,7 @@ title:  "Project Euler Problem #15 - Addendum"
 date:   2021-02-06 00:00:00 -0500
 categories: ["Software"]
 tags: ["algorithms"]
+summary: "Showing a *really* obvious project euler answer that I didn't see before."
 ---
 
 *This is an addendum to [this previous post](/blog/project-euler-15).*

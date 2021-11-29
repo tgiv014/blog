@@ -1,5 +1,6 @@
 ---
 title: "Authmap"
+summary: "A service that geolocates unwanted SSH attempts."
 ---
 
 ![Authmap Image](/img/authmap.png)

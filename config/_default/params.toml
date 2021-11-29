@@ -33,7 +33,7 @@ colorScheme = "fire"
 
 [list]
   showBreadcrumbs = false
-  showSummary = false
+  showSummary = true
   groupByYear = true
 
 [taxonomy]

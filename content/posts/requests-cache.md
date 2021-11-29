@@ -3,6 +3,7 @@ title:  "Faster Backtesting with requests-cache"
 date:   2021-02-03 00:00:00 -0500
 categories: ["Software"]
 tags: ["python", "trading"]
+summary: "Caching uber-repetitive Yahoo Finance queries"
 ---
 
 # The Problem
