@@ -7,11 +7,9 @@
 
 colorScheme = "fire"
 # darkMode = "auto"
-# darkToggle = false
-# logo = "img/logo.svg"
-# description = "My awesome website"
-# mainSections = ["section1", "section2"]
-# robots = ""
+darkToggle = true
+description = "The personal blog of Thomas Gorham"
+mainSections = ["posts"]
 
 [homepage]
   layout = "profile" # valid options: page, profile, custom
