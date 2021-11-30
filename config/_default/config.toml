@@ -5,7 +5,6 @@
 baseURL = "https://mntn.dev/"
 languageCode = "en"
 defaultContentLanguage = "en"
-theme = "congo"
 
 title = "mntn.dev"
 # copyright = "Copy, _right?_ :thinking_face:"
