@@ -6,7 +6,7 @@ tags: ["hosting", "docker", "zfs", "linux", "debian"]
 summary: "A look at the setup of my home server."
 ---
 
-![ZFS Docker and Debian Icons](/img/zfs_docker_debian.png)
+{{< figure src="zfs_docker_debian.png">}}
 
 # How'd we Get Here...
 A while back, I snagged a Dell R710 from Ebay for $350 delivered. This thing is a virtualization *monster*. 8 cores and 144GB of ECC RAM, perfect for filling with bhyve virtual machines on FreeNAS. This setup worked great for me until I became interested in Docker containers. FreeNAS just doesn't support a docker environment, so let's build something from the ground up and document the process.
