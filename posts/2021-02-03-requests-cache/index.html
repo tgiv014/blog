@@ -3,10 +3,10 @@
 <meta http-equiv=content-language content="en">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
-<title>Generative Art &#183; mntn.dev</title>
-<meta name=title content="Generative Art &#183; mntn.dev">
+<title>Faster Backtesting with requests-cache &#183; mntn.dev</title>
+<meta name=title content="Faster Backtesting with requests-cache &#183; mntn.dev">
 <meta name=description content="The personal blog of Thomas Gorham">
-<link rel=canonical href=https://mntn.dev/projects/gen/>
+<link rel=canonical href=https://mntn.dev/posts/2021-02-03-requests-cache/>
 <link type=text/css rel=stylesheet href=/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK+uxc8yk2csLelasbP+FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA==">
 <link type=text/css rel=stylesheet href=/css/compiled/main.min.4076b9cf114dd23cca017f3365e2205a4c9a4b2c0ef4193ccd08883f76e554aa40f674a8f6e77a1b2895be0975ba8e019b0c59996c2eea32e4970ca4d5221653.css integrity="sha512-QHa5zxFN0jzKAX8zZeIgWkyaSywO9Bk8zQiIP3blVKpA9nSo9ud6GyiVvgl1uo4BmwxZmWwu6jLklwyk1SIWUw==">
 <script>function loadPreferredAppearance(){localStorage.preferredAppearance==="dark"||!("preferredAppearance"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function setPreferredAppearance(a){a=="default"?localStorage.removeItem("preferredAppearance"):localStorage.preferredAppearance=a,loadPreferredAppearance()}loadPreferredAppearance(),window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance)</script>
@@ -14,16 +14,16 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=manifest href=/site.webmanifest>
-<meta property="og:title" content="Generative Art">
-<meta property="og:description" content="Programs that make pretty pictures.">
+<meta property="og:title" content="Faster Backtesting with requests-cache">
+<meta property="og:description" content="Caching uber-repetitive Yahoo Finance queries">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://mntn.dev/projects/gen/"><meta property="article:section" content="projects">
-<meta property="article:published_time" content="2021-05-31T12:00:00-05:00">
-<meta property="article:modified_time" content="2021-05-31T12:00:00-05:00">
+<meta property="og:url" content="https://mntn.dev/posts/2021-02-03-requests-cache/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-02-03T00:00:00-05:00">
+<meta property="article:modified_time" content="2021-02-03T00:00:00-05:00">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="Generative Art">
-<meta name=twitter:description content="Programs that make pretty pictures.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Projects","name":"Generative Art","headline":"Generative Art","description":"Programs that make pretty pictures.","inLanguage":"en","author":{"@type":"Person","name":"Thomas Gorham"},"creator":{"@type":"Person","name":"Thomas Gorham"},"copyrightHolder":"Thomas Gorham","copyrightYear":"2021","dateCreated":"2021-05-31T12:00:00-05:00","datePublished":"2021-05-31T12:00:00-05:00","dateModified":"2021-05-31T12:00:00-05:00","url":"https:\/\/mntn.dev\/projects\/gen\/","wordCount":"91","keywords":["python","art"]}</script>
+<meta name=twitter:title content="Faster Backtesting with requests-cache">
+<meta name=twitter:description content="Caching uber-repetitive Yahoo Finance queries">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Posts","name":"Faster Backtesting with requests-cache","headline":"Faster Backtesting with requests-cache","description":"Caching uber-repetitive Yahoo Finance queries","inLanguage":"en","author":{"@type":"Person","name":"Thomas Gorham"},"creator":{"@type":"Person","name":"Thomas Gorham"},"copyrightHolder":"Thomas Gorham","copyrightYear":"2021","dateCreated":"2021-02-03T00:00:00-05:00","datePublished":"2021-02-03T00:00:00-05:00","dateModified":"2021-02-03T00:00:00-05:00","url":"https:\/\/mntn.dev\/posts\/2021-02-03-requests-cache\/","wordCount":"262","keywords":["python","trading"]}</script>
 <meta name=generator content="Hugo 0.89.4">
 <meta name=author content="Thomas Gorham">
 <link href=mailto:tom@mntn.dev rel=me>
@@ -54,21 +54,24 @@
 <article class=max-w-prose>
 <header>
 <h1 class="mt-0 text-4xl font-extrabold text-neutral-800 dark:text-neutral">
-Generative Art
+Faster Backtesting with requests-cache
 </h1>
 <div class="mt-8 mb-12 text-base text-neutral-400 dark:text-neutral-500">
 <div class="flex flex-row items-center">
-<span title="Reading time">1 min</span>
+<time datetime="2021-02-03 00:00:00 -0500 -0500">3 February 2021</time><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">2 mins</span>
 </div>
 </div>
 </header>
 <section class="prose dark:prose-light">
-<h2 id=mag-fieldhttpsgithubcomtgiv014mag_field><a href=https://github.com/tgiv014/mag_field>Mag Field</a> <a class=heading-anchor href=#mag-fieldhttpsgithubcomtgiv014mag_field aria-label=Anchor>#</a></h2>
-<p><img src=https://raw.githubusercontent.com/tgiv014/mag_field/main/static/threefold_small.png alt="Magfield Example"></p>
-<p>Inspired by E/H-field diagrams and built using numpy and pycairo. This project draws a visually pleasing representation of the magnetic field created by randomly placed infinite current-carrying wires extending out of the canvas.</p>
-<h2 id=circle-packerhttpsgithubcomtgiv014circle_packer><a href=https://github.com/tgiv014/circle_packer>Circle Packer</a> <a class=heading-anchor href=#circle-packerhttpsgithubcomtgiv014circle_packer aria-label=Anchor>#</a></h2>
-<p><img src=https://raw.githubusercontent.com/tgiv014/circle_packer/main/static/logo.png alt="Circle Packer Example"></p>
-<p>This project draws something pretty similar to the <a href=https://en.wikipedia.org/wiki/Ishihara_test>color blindness test</a> everyone knows and loves. Instead of packing circles into a larger circle, it packs them randomly into a mask rendered from an input string. It can also output images as SVG files suitable for use with a plotter or laser cutter.</p>
+<h1 id=the-problem>The Problem <a class=heading-anchor href=#the-problem aria-label=Anchor>#</a></h1>
+<p>Lately, I&rsquo;ve been playing with algorithmic trading using <a href=https://www.backtrader.com/>Backtrader</a>, which is a spectacular tool for experimenting with algorithmic trading strategies. This hobby could be considered a problem in itself, but that&rsquo;s not today&rsquo;s topic. A strategy I&rsquo;ve been testing involves maintaining a list of S&P500 stocks, ranking them by some metrics, and making a portfolio out of the top 20% or so. Essentially, a really impersonal buy-and-hold strategy.</p>
+<p>Unfortunately, this means I need to collect data on 500 stocks over my backtesting time range (5+ years). I would really prefer to use Backtrader&rsquo;s automatic Yahoo Finance data source <code>bt.feeds.YahooFinanceData</code>, but I don&rsquo;t want to send 500+ requests to Yahoo every time I tweak a single variable. On a list of just 16 stocks, it takes ~40 seconds to query 5 years of data and run the strategy. There has to be a better way.</p>
+<h1 id=enter-requests-cache>Enter <code>requests-cache</code>! <a class=heading-anchor href=#enter-requests-cache aria-label=Anchor>#</a></h1>
+<p>Backtrader supports proxies (so we could set up a caching proxy), but under the hood, backtrader&rsquo;s <a href=https://github.com/mementum/backtrader/blob/master/backtrader/feeds/yahoo.py>Yahoo feed</a> uses the <code>requests</code> module! This means we can solve our problem without even touching a proxy service or having to set up local SSL certificates to cache HTTPS.</p>
+<p>All we need to do is run <code>pip install requests-cache</code> and add two lines of code to the start of our Backtrader script.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=kn>import</span> <span class=nn>requests_cache</span>
+<span class=n>requests_cache</span><span class=o>.</span><span class=n>install_cache</span><span class=p>(</span><span class=s1>&#39;test_cache&#39;</span><span class=p>,</span> <span class=n>expire_after</span><span class=o>=</span><span class=mi>3600</span><span class=p>)</span>
+</code></pre></div><p>Now, requests-cache will automatically cache any requests made via the python <code>request</code> module in a file called <code>test_cache.sqlite</code>. Even HTTPS. With this little change, backtesting against 16 stocks over 5 years finishes in 10 seconds: an improvement of 75%!</p>
 </section>
 <footer class=pt-8>
 <div class=flex>
@@ -109,12 +112,22 @@ Thomas Gorham
 <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
 <div class="flex justify-between pt-3">
 <span>
+<a class=flex href=/posts/2021-02-06-project-euler-15-add/>
+<span class="mr-3 article-pagination-direction">&larr;</span>
+<span class="flex flex-col">
+<span class="article-pagination-title mt-[0.1rem] leading-6">Project Euler Problem #15 - Addendum</span>
+<span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
+<time datetime="2021-02-06 00:00:00 -0500 -0500">6 February 2021</time>
+</span>
+</span>
+</a>
 </span>
 <span>
-<a class="flex text-right" href=/projects/authmap/>
+<a class="flex text-right" href=/posts/2020-11-13-project-euler-15/>
 <span class="flex flex-col">
-<span class="article-pagination-title mt-[0.1rem] leading-6">Authmap</span>
+<span class="article-pagination-title mt-[0.1rem] leading-6">Project Euler Problem #15</span>
 <span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
+<time datetime="2020-11-13 17:00:00 -0500 -0500">13 November 2020</time>
 </span>
 </span>
 <span class="ml-3 article-pagination-direction">&rarr;</span>
