@@ -3,10 +3,10 @@
 <meta http-equiv=content-language content="en">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
-<title>Docker & ZFS On Debian &#183; mntn.dev</title>
-<meta name=title content="Docker & ZFS On Debian &#183; mntn.dev">
+<title>Project Euler Problem #15 - Addendum &#183; mntn.dev</title>
+<meta name=title content="Project Euler Problem #15 - Addendum &#183; mntn.dev">
 <meta name=description content="The personal blog of Thomas Gorham">
-<link rel=canonical href=https://mntn.dev/posts/2021-10-03-docker-zfs-deb-1/>
+<link rel=canonical href=https://mntn.dev/posts/3-project-euler-15-add/>
 <link type=text/css rel=stylesheet href=/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK+uxc8yk2csLelasbP+FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA==">
 <link type=text/css rel=stylesheet href=/css/compiled/main.min.4076b9cf114dd23cca017f3365e2205a4c9a4b2c0ef4193ccd08883f76e554aa40f674a8f6e77a1b2895be0975ba8e019b0c59996c2eea32e4970ca4d5221653.css integrity="sha512-QHa5zxFN0jzKAX8zZeIgWkyaSywO9Bk8zQiIP3blVKpA9nSo9ud6GyiVvgl1uo4BmwxZmWwu6jLklwyk1SIWUw==">
 <script>function loadPreferredAppearance(){localStorage.preferredAppearance==="dark"||!("preferredAppearance"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function setPreferredAppearance(a){a=="default"?localStorage.removeItem("preferredAppearance"):localStorage.preferredAppearance=a,loadPreferredAppearance()}loadPreferredAppearance(),window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance)</script>
@@ -14,16 +14,16 @@
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=manifest href=/site.webmanifest>
-<meta property="og:title" content="Docker & ZFS On Debian">
-<meta property="og:description" content="A look at the setup of my home server.">
+<meta property="og:title" content="Project Euler Problem #15 - Addendum">
+<meta property="og:description" content="Showing a really obvious project euler answer that I didn&rsquo;t see before.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://mntn.dev/posts/2021-10-03-docker-zfs-deb-1/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2020-10-03T09:45:00-05:00">
-<meta property="article:modified_time" content="2020-10-03T09:45:00-05:00">
+<meta property="og:url" content="https://mntn.dev/posts/3-project-euler-15-add/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-02-06T00:00:00-05:00">
+<meta property="article:modified_time" content="2021-02-06T00:00:00-05:00">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="Docker & ZFS On Debian">
-<meta name=twitter:description content="A look at the setup of my home server.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Posts","name":"Docker \u0026 ZFS On Debian","headline":"Docker \u0026 ZFS On Debian","description":"A look at the setup of my home server.","inLanguage":"en","author":{"@type":"Person","name":"Thomas Gorham"},"creator":{"@type":"Person","name":"Thomas Gorham"},"copyrightHolder":"Thomas Gorham","copyrightYear":"2020","dateCreated":"2020-10-03T09:45:00-05:00","datePublished":"2020-10-03T09:45:00-05:00","dateModified":"2020-10-03T09:45:00-05:00","url":"https:\/\/mntn.dev\/posts\/2021-10-03-docker-zfs-deb-1\/","wordCount":"1204","keywords":["hosting","docker","zfs","linux","debian"]}</script>
+<meta name=twitter:title content="Project Euler Problem #15 - Addendum">
+<meta name=twitter:description content="Showing a really obvious project euler answer that I didn&rsquo;t see before.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Posts","name":"Project Euler Problem #15 - Addendum","headline":"Project Euler Problem #15 - Addendum","description":"Showing a \u003cem\u003ereally\u003c\/em\u003e obvious project euler answer that I didn\u0026rsquo;t see before.","inLanguage":"en","author":{"@type":"Person","name":"Thomas Gorham"},"creator":{"@type":"Person","name":"Thomas Gorham"},"copyrightHolder":"Thomas Gorham","copyrightYear":"2021","dateCreated":"2021-02-06T00:00:00-05:00","datePublished":"2021-02-06T00:00:00-05:00","dateModified":"2021-02-06T00:00:00-05:00","url":"https:\/\/mntn.dev\/posts\/3-project-euler-15-add\/","wordCount":"178","keywords":["algorithms"]}</script>
 <meta name=generator content="Hugo 0.89.4">
 <meta name=author content="Thomas Gorham">
 <link href=mailto:tom@mntn.dev rel=me>
@@ -54,152 +54,61 @@
 <article class=max-w-prose>
 <header>
 <h1 class="mt-0 text-4xl font-extrabold text-neutral-800 dark:text-neutral">
-Docker & ZFS On Debian
-      </h1>
+Project Euler Problem #15 - Addendum
+</h1>
 <div class="mt-8 mb-12 text-base text-neutral-400 dark:text-neutral-500">
 <div class="flex flex-row items-center">
-<time datetime="2020-10-03 09:45:00 -0500 -0500">3 October 2020</time><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">6 mins</span>
+<time datetime="2021-02-06 00:00:00 -0500 -0500">6 February 2021</time><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">1 min</span>
 </div>
 </div>
 </header>
 <section class="prose dark:prose-light">
-<figure><img src=/posts/2021-10-03-docker-zfs-deb-1/zfs_docker_debian.png>
-</figure>
-<h1 id=howd-we-get-here>How&rsquo;d we Get Here&mldr; <a class=heading-anchor href=#howd-we-get-here aria-label=Anchor>#</a></h1>
-<p>A while back, I snagged a Dell R710 from Ebay for $350 delivered. This thing is a virtualization <em>monster</em>. 8 cores and 144GB of ECC RAM, perfect for filling with bhyve virtual machines on FreeNAS. This setup worked great for me until I became interested in Docker containers. FreeNAS just doesn&rsquo;t support a docker environment, so let&rsquo;s build something from the ground up and document the process.</p>
-<h1 id=constraints>Constraints <a class=heading-anchor href=#constraints aria-label=Anchor>#</a></h1>
-<ul>
-<li>Must use ZFS (no need for ZFS root)</li>
-<li>Native docker support</li>
-<li>Lightweight (no GUI, unnecessary package systems *cough cough snaps*, etc.)</li>
-</ul>
-<p>With these constraints, we know we absolutely must use Linux and we would really like a distro that has openzfs in its package control. In the past I&rsquo;ve used Ubuntu Server and ubuntu 16.04 has zfs available as a package, but I want to avoid snaps like the plague. Because of this, I&rsquo;m going to use Debian.</p>
-<h1 id=initial-setup>Initial Setup <a class=heading-anchor href=#initial-setup aria-label=Anchor>#</a></h1>
-<p>First things first, we&rsquo;re going to shut down the server and remove every drive but our desired boot drive. FreeNAS uses a flash drive as its root storage, but debian doesn&rsquo;t quite support that. In my case, I&rsquo;m going to use an old 120GB SSD in an optical drive caddy in place of the server&rsquo;s disk drive. It&rsquo;s easy enough to complete the guided install, and Debian has some pretty good installation literature:</p>
-<ul>
-<li><a href=https://www.debian.org/releases/stable/i386/index.en.html>Installation Guide - Long</a></li>
-<li><a href=https://www.debian.org/releases/stable/i386/apa.en.html>Installation Howto - Short</a></li>
-</ul>
-<p>I do have a few gotchas during the guided install:</p>
-<ul>
-<li>Some NICs require closed-source firmware to operate. The NIC in my R710 is one of those, so I had to use the <a href=https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/>non-free debian image</a>.</li>
-<li>Guided partitioning failed for my install. I suspect that this is because it was trying to make a gigantic swap partition to match the 144GB of RAM. I decided not to use a swap partition and partition the entire SSD as <code>/</code>.</li>
-<li>I avoided giving root a password. Instead, I have an administrator user with sudo access.</li>
-<li>I did not install any desktop environments or X server components.</li>
-<li>Don&rsquo;t forget to select openssh!</li>
-</ul>
-<h1 id=post-install>Post-Install <a class=heading-anchor href=#post-install aria-label=Anchor>#</a></h1>
-<p>Now that we have a fully running debian system, let&rsquo;s change a few things. Pop all your drives back in and ssh in.</p>
-<p>Let&rsquo;s gear up to use ssh without a password, starting by setting up private key authentication. If you&rsquo;re on linux, you&rsquo;ve got it easy: <code>$ ssh-copy-id $USER@$HOST</code>. On Windows, I find it easiest to manually copy the contents of <code>%HOMEPATH%\.ssh\id_rsa.pub</code> to <code>~/.ssh/authorized_keys</code> on my server. If you don&rsquo;t have an <code>~/.ssh/id_rsa.pub</code> or <code>%HOMEPATH%\.ssh\id_rsa.pub</code>, you better generate an ssh key with <code>$ ssh-keygen</code>.</p>
-<p>Once your public key is copied in, it&rsquo;s a good idea to exit your ssh session and attempt to login with private key auth. If you don&rsquo;t need a password, you&rsquo;re on the right path. Time to disable password authentication. In <code>/etc/ssh/sshd_config</code>, find the lines containing the following keys, uncomment them and make sure they&rsquo;re set to <code>no</code>.</p>
-<pre tabindex=0><code>PasswordAuthentication no
-ChallengeResponseAuthentication no
-PermitRootLogin no
-UsePAM no
-</code></pre><p>Now you can reload sshd and bask in paswordless security strong enough to leave exposed publicly. <code>$ sudo /etc/init.d/sshd reload</code></p>
-<h1 id=zfs-time>ZFS Time <a class=heading-anchor href=#zfs-time aria-label=Anchor>#</a></h1>
-<p>Debian makes this one super easy. Check the <a href=https://wiki.debian.org/ZFS>official ZFS Debian Wiki Page</a> for more info. Use the following commands to install ZFS on Debian.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ sudo apt update
-$ sudo apt install linux-headers-<span class=sb>`</span>uname -r<span class=sb>`</span>
-$ sudo apt install -t buster-backports dkms sol-dkms
-$ sudo apt install -t buster-backports zfs-dkms zfsutils-linux
-</code></pre></div><p>It may take a little while to run the dkms build, and it may throw a few warnings. They do not specifically recommend a reboot on the Debian Wiki, but it&rsquo;s never a bad idea when dealing with kernel modules.</p>
-<p>Just for grins, if you happen to be installing on a system that used to run FreeNAS, you can try to import your old pool with <code>$ sudo zpool import</code>. You&rsquo;re likely to see <code>action: The pool can be imported using its name or numeric identifier and the '-f' flag.</code>. You can force the import by running <code>$ sudo zpool import -f $POOLNAME</code>.</p>
-<p>If you&rsquo;re starting fresh, now is the time to make your first zfs pool. I&rsquo;m in a bit of a hard drive shortage, so for testing&rsquo;s sake I will be doing a stripe pool with two 500GB hard drives. ZFS uses disk IDs or paths to reference disks instead of /dev/sdX paths. You can figure out which disk is which with the following commands:</p>
-<pre tabindex=0><code>$ ls -l /dev/disk/by-id
-$ ls -l /dev/disk/by-path
-$ lsblk -o NAME,SIZE,MODEL,VENDOR
-</code></pre><p>With the device IDs in hand, I&rsquo;ll make a zpool with:</p>
-<pre tabindex=0><code>$ sudo zpool create tank ata-ST9500325AS_6VESPM0A ata-ST9500325AS_6VESRNXY
-</code></pre><h1 id=docker-install>Docker Install <a class=heading-anchor href=#docker-install aria-label=Anchor>#</a></h1>
-<p>This is essentially a summary of the <a href=https://docs.docker.com/engine/install/debian/>Docker Docs for Debian</a>.</p>
-<ol>
-<li>Update apt and install required packages:</li>
-</ol>
-<pre tabindex=0><code>$ sudo apt update
-$ sudo apt install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
-</code></pre><ol start=2>
-<li>Get Docker&rsquo;s GPG key:</li>
-</ol>
-<pre tabindex=0><code>$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-</code></pre><p>You can verify you have the correct key as follows:</p>
-<pre tabindex=0><code>$ sudo apt-key fingerprint 0EBFCD88
-pub   4096R/0EBFCD88 2017-02-22
-      Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
-uid                  Docker Release (CE deb) &lt;docker@docker.com&gt;
-sub   4096R/F273FCD8 2017-02-22
-</code></pre><ol start=3>
-<li>Use the following command to set up Docker stable.</li>
-</ol>
-<pre tabindex=0><code>$ sudo add-apt-repository \
-   &quot;deb [arch=amd64] https://download.docker.com/linux/debian \
-   $(lsb_release -cs) \
-   stable&quot;
-</code></pre><ol start=4>
-<li>Finally, install docker!</li>
-</ol>
-<pre tabindex=0><code>$ sudo apt update
-$ sudo apt install docker-ce docker-ce-cli containerd-io
-</code></pre><ol start=5>
-<li>If you want to allow other users to run docker commands, you can set that up <a href=https://docs.docker.com/engine/install/linux-postinstall/>as follows</a>:</li>
-</ol>
-<pre tabindex=0><code>$ sudo groupadd docker
-$ sudo usermod -aG docker $USER
-</code></pre><p>Log out and back in</p>
-<ol>
-<li>You can verify that your docker install is functional by running <code>hello-world</code></li>
-</ol>
-<pre tabindex=0><code>$ docker run --rm hello-world
-</code></pre><h1 id=lets-hook-up-docker-and-zfs>Let&rsquo;s Hook up Docker and ZFS <a class=heading-anchor href=#lets-hook-up-docker-and-zfs aria-label=Anchor>#</a></h1>
-<p>This part&rsquo;s for the adventurous. You could certainly just make a bunch of ZFS datasets with filesystem mounts and mount those in your containers for bulk storage, but that&rsquo;s no fun! Docker has a <a href=https://docs.docker.com/storage/storagedriver/zfs-driver/>ZFS storage driver</a> that will back all container, image, and volume storage with zfs. Let&rsquo;s set it up.</p>
-<ol>
-<li>Kill docker:</li>
-</ol>
-<pre tabindex=0><code>$ sudo /etc/init.d/docker stop
-</code></pre><ol start=2>
-<li>Back up /var/lib/docker just in case and then delete its contents:</li>
-</ol>
-<pre tabindex=0><code>$ sudo cp -au /var/lib/docker /var/lib/docker.bk
-$ sudo rm -rf /var/lib/docker/*
-</code></pre><ol start=3>
-<li>Create a ZFS-backed mountpoint at <code>/var/lib/docker</code>. The official docker instructions suggest making a zpool and mounting it there, but I&rsquo;ll use a dataset since I already have a zpool configured (name <code>tank</code>).</li>
-</ol>
-<pre tabindex=0><code>$ sudo zfs create -o mountpoint=/var/lib/docker tank/docker
-</code></pre><ol start=4>
-<li>Tell Docker to use ZFS for its storage driver. In <code>/etc/docker/daemon.json</code>:</li>
-</ol>
-<pre tabindex=0><code>{
-  &quot;storage-driver&quot;: &quot;zfs&quot;
-}
-</code></pre><ol start=5>
-<li>Start docker back up and verify you&rsquo;re using the ZFS storage driver:</li>
-</ol>
-<pre tabindex=0><code>$ sudo /etc/init.d/docker start
-$ docker info
-Server:
- Containers: 0
-  Running: 0
-  Paused: 0
-  Stopped: 0
- Images: 114
- Server Version: 19.03.11
- Storage Driver: zfs
-  Zpool: tank
-  Zpool Health: ONLINE
-  Parent Dataset: tank/docker
-  Space Used By Parent: 17283463680
-  Space Available: 935802788864
-  Parent Quota: no
-  Compression: off
- Logging Driver: json-file
- Cgroup Driver: cgroupfs
-</code></pre><h1 id=-done>🎉 Done! <a class=heading-anchor href=#-done aria-label=Anchor>#</a></h1>
-<p>Now we have a server running Debian with Docker using ZFS-backed storage. This would be a great way to put together a NAS setup using samba or NFS with a bunch of self-hosted services. I&rsquo;ll be using Docker to host a home assistant instance with nginx sitting in front as a reverse proxy.</p>
+<p><em>This is an addendum to <a href=/blog/project-euler-15>this previous post</a>.</em></p>
+<h1 id=its-learnin-time>It&rsquo;s learnin' time <a class=heading-anchor href=#its-learnin-time aria-label=Anchor>#</a></h1>
+<p>While completing advent of code 2020, I learned about <a href=https://en.wikipedia.org/wiki/Memoization>memoization</a>. I realized that this is a perfect problem to apply the technique to. All we need is a hashmap indexed by our tree coordinates that we&rsquo;ll pass in our recursive function. If there&rsquo;s a cached value for the function inputs, we early return the cached value. In our normal return path we save off the calculated value before actually returning it. It&rsquo;s a simple formula for faster processing.</p>
+<p>Without further ado:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-rust data-lang=rust><span class=k>use</span><span class=w> </span><span class=n>std</span>::<span class=n>collections</span>::<span class=n>HashMap</span><span class=p>;</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=cp>#[derive(Hash, Eq, PartialEq, Debug)]</span><span class=w>
+</span><span class=w></span><span class=k>struct</span> <span class=nc>Coordinate</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>    </span><span class=n>x</span>: <span class=kt>u32</span><span class=p>,</span><span class=w>
+</span><span class=w>    </span><span class=n>y</span>: <span class=kt>u32</span><span class=p>,</span><span class=w>
+</span><span class=w></span><span class=p>}</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=c1>// The size of our domain in steps
+</span><span class=c1>// The grid is NxN steps
+</span><span class=c1>// Really, our position grid is N+1xN+1
+</span><span class=c1>// [0,0] describes the start and [N,N] describes the end point
+</span><span class=c1></span><span class=k>static</span><span class=w> </span><span class=n>N</span>:<span class=kt>u32</span> <span class=o>=</span><span class=w> </span><span class=mi>20</span><span class=p>;</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=k>fn</span> <span class=nf>build_node</span><span class=p>(</span><span class=n>x</span>:<span class=kt>u32</span><span class=p>,</span><span class=w> </span><span class=n>y</span>:<span class=kt>u32</span><span class=p>,</span><span class=w> </span><span class=n>cache</span>:<span class=kp>&amp;</span><span class=nc>mut</span><span class=w> </span><span class=n>HashMap</span><span class=o>&lt;</span><span class=n>Coordinate</span><span class=p>,</span><span class=w> </span><span class=kt>u64</span><span class=o>&gt;</span><span class=p>)</span><span class=w> </span>-&gt; <span class=kt>u64</span> <span class=p>{</span><span class=w>
+</span><span class=w>    </span><span class=kd>let</span><span class=w> </span><span class=n>c</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>Coordinate</span><span class=p>{</span><span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>};</span><span class=w>
+</span><span class=w>    </span><span class=kd>let</span><span class=w> </span><span class=k>mut</span><span class=w> </span><span class=n>sum</span>:<span class=kt>u64</span> <span class=o>=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w>
+</span><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=n>cache</span><span class=p>.</span><span class=n>contains_key</span><span class=p>(</span><span class=o>&amp;</span><span class=n>c</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=n>cache</span><span class=p>[</span><span class=o>&amp;</span><span class=n>c</span><span class=p>];</span><span class=w>
+</span><span class=w>    </span><span class=p>}</span><span class=w>
+</span><span class=w>    </span><span class=c1>// If x==y==N, we&#39;re at the end point!
+</span><span class=c1></span><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=n>x</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=n>N</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=n>y</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=n>N</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=mi>1</span><span class=p>;</span><span class=w>
+</span><span class=w>    </span><span class=p>}</span><span class=w>
+</span><span class=w>    </span><span class=c1>// Recurse for each child node if possible
+</span><span class=c1></span><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=n>x</span><span class=w> </span><span class=o>&lt;</span><span class=w> </span><span class=n>N</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>        </span><span class=n>sum</span><span class=w> </span><span class=o>+=</span><span class=w> </span><span class=n>build_node</span><span class=p>(</span><span class=n>x</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>1</span><span class=p>,</span><span class=w> </span><span class=n>y</span><span class=p>,</span><span class=w> </span><span class=n>cache</span><span class=p>);</span><span class=w>
+</span><span class=w>    </span><span class=p>}</span><span class=w>
+</span><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=n>y</span><span class=w> </span><span class=o>&lt;</span><span class=w> </span><span class=n>N</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>        </span><span class=n>sum</span><span class=w> </span><span class=o>+=</span><span class=w> </span><span class=n>build_node</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=w> </span><span class=n>y</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>1</span><span class=p>,</span><span class=w> </span><span class=n>cache</span><span class=p>);</span><span class=w>
+</span><span class=w>    </span><span class=p>}</span><span class=w>
+</span><span class=w>    
+</span><span class=w>    </span><span class=n>cache</span><span class=p>.</span><span class=n>insert</span><span class=p>(</span><span class=n>c</span><span class=p>,</span><span class=w> </span><span class=n>sum</span><span class=p>);</span><span class=w>
+</span><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=n>sum</span><span class=p>;</span><span class=w>
+</span><span class=w></span><span class=p>}</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=k>fn</span> <span class=nf>main</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>    </span><span class=kd>let</span><span class=w> </span><span class=k>mut</span><span class=w> </span><span class=n>cache</span>:<span class=nc>HashMap</span><span class=o>&lt;</span><span class=n>Coordinate</span><span class=p>,</span><span class=w> </span><span class=kt>u64</span><span class=o>&gt;</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=n>HashMap</span>::<span class=n>new</span><span class=p>();</span><span class=w>
+</span><span class=w>    </span><span class=kd>let</span><span class=w> </span><span class=n>n_ends</span>:<span class=kt>u64</span> <span class=o>=</span><span class=w> </span><span class=n>build_node</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=o>&amp;</span><span class=k>mut</span><span class=w> </span><span class=n>cache</span><span class=p>);</span><span class=w>
+</span><span class=w>    </span><span class=fm>println!</span><span class=p>(</span><span class=s>&#34;Total unique paths: {}&#34;</span><span class=p>,</span><span class=w> </span><span class=n>n_ends</span><span class=p>);</span><span class=w>
+</span><span class=w></span><span class=p>}</span><span class=w>
+</span></code></pre></div><p>Now it takes ~5ms to evaluate every path in a 20x20 grid! That&rsquo;s a heck of a lot better than 30min.</p>
 </section>
 <footer class=pt-8>
 <div class=flex>
@@ -240,17 +149,17 @@ Thomas Gorham
 <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
 <div class="flex justify-between pt-3">
 <span>
-<a class=flex href=/posts/2020-11-13-project-euler-15/>
-<span class="mr-3 article-pagination-direction">&larr;</span>
-<span class="flex flex-col">
-<span class="article-pagination-title mt-[0.1rem] leading-6">Project Euler Problem #15</span>
-<span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
-<time datetime="2020-11-13 17:00:00 -0500 -0500">13 November 2020</time>
-</span>
-</span>
-</a>
 </span>
 <span>
+<a class="flex text-right" href=/posts/2-requests-cache/>
+<span class="flex flex-col">
+<span class="article-pagination-title mt-[0.1rem] leading-6">Faster Backtesting with requests-cache</span>
+<span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
+<time datetime="2021-02-03 00:00:00 -0500 -0500">3 February 2021</time>
+</span>
+</span>
+<span class="ml-3 article-pagination-direction">&rarr;</span>
+</a>
 </span>
 </div>
 </div>
