@@ -1,7 +1,7 @@
 ---
 title:  "Project Euler Problem #15"
 date:   2020-11-13 17:00:00 -0500
-categories: ["Software", "Hardware"]
+categories: ["Software"]
 tags: ["algorithms"]
 summary: "Three ways to tackle Project Euler Problem #15"
 ---
