@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on mntn.dev</title><link>https://mntn.dev/categories/</link><description>Recent content in Categories on mntn.dev</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 06 Feb 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://mntn.dev/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Software</title><link>https://mntn.dev/categories/software/</link><pubDate>Sat, 06 Feb 2021 00:00:00 -0500</pubDate><guid>https://mntn.dev/categories/software/</guid><description/></item><item><title>Hardware</title><link>https://mntn.dev/categories/hardware/</link><pubDate>Fri, 13 Nov 2020 17:00:00 -0500</pubDate><guid>https://mntn.dev/categories/hardware/</guid><description/></item><item><title>Homelab</title><link>https://mntn.dev/categories/homelab/</link><pubDate>Sat, 03 Oct 2020 09:45:00 -0500</pubDate><guid>https://mntn.dev/categories/homelab/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on mntn.dev</title>
+    <link>https://mntn.dev/categories/</link>
+    <description>Recent content in Categories on mntn.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 Feb 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://mntn.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software</title>
+      <link>https://mntn.dev/categories/software/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://mntn.dev/categories/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homelab</title>
+      <link>https://mntn.dev/categories/homelab/</link>
+      <pubDate>Sat, 03 Oct 2020 09:45:00 -0500</pubDate>
+      
+      <guid>https://mntn.dev/categories/homelab/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

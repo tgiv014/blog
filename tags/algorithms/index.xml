@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>algorithms on mntn.dev</title><link>https://mntn.dev/tags/algorithms/</link><description>Recent content in algorithms on mntn.dev</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 06 Feb 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://mntn.dev/tags/algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>Project Euler Problem #15 - Addendum</title><link>https://mntn.dev/posts/3-project-euler-15-add/</link><pubDate>Sat, 06 Feb 2021 00:00:00 -0500</pubDate><guid>https://mntn.dev/posts/3-project-euler-15-add/</guid><description>Showing a &lt;em>really&lt;/em> obvious project euler answer that I didn&amp;rsquo;t see before.</description></item><item><title>Project Euler Problem #15</title><link>https://mntn.dev/posts/1-project-euler-15/</link><pubDate>Fri, 13 Nov 2020 17:00:00 -0500</pubDate><guid>https://mntn.dev/posts/1-project-euler-15/</guid><description>Three ways to tackle Project Euler Problem #15</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>algorithms on mntn.dev</title>
+    <link>https://mntn.dev/tags/algorithms/</link>
+    <description>Recent content in algorithms on mntn.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 Feb 2021 00:00:00 -0500</lastBuildDate><atom:link href="https://mntn.dev/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Euler Problem #15 - Addendum</title>
+      <link>https://mntn.dev/posts/3-project-euler-15-add/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://mntn.dev/posts/3-project-euler-15-add/</guid>
+      <description>Showing a &lt;em&gt;really&lt;/em&gt; obvious project euler answer that I didn&amp;rsquo;t see before.</description>
+    </item>
+    
+    <item>
+      <title>Project Euler Problem #15</title>
+      <link>https://mntn.dev/posts/1-project-euler-15/</link>
+      <pubDate>Fri, 13 Nov 2020 17:00:00 -0500</pubDate>
+      
+      <guid>https://mntn.dev/posts/1-project-euler-15/</guid>
+      <description>Three ways to tackle Project Euler Problem #15</description>
+    </item>
+    
+  </channel>
+</rss>

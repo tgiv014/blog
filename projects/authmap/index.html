@@ -1,76 +1,92 @@
-<!doctype html><html lang=en><head>
-<meta charset=utf-8>
-<meta http-equiv=content-language content="en">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<title>Authmap &#183; mntn.dev</title>
-<meta name=title content="Authmap &#183; mntn.dev">
-<meta name=description content="The personal blog of Thomas Gorham">
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Authmap | mntn.dev</title>
+<meta name=keywords content="golang,ssh,linux">
+<meta name=description content="A service that geolocates unwanted SSH attempts.">
+<meta name=author content="Thomas Gorham">
 <link rel=canonical href=https://mntn.dev/projects/authmap/>
-<link type=text/css rel=stylesheet href=/css/schemes/fire.min.bc9f23b39eafda60b3812264203597715edf0b788afaec5cf3293672c2de95ab1b3fe14c60d3bac20128034cde726589691bc1fe9d89fc64c30099d99ff44f44.css integrity="sha512-vJ8js56v2mCzgSJkIDWXcV7fC3iK+uxc8yk2csLelasbP+FMYNO6wgEoA0zecmWJaRvB/p2J/GTDAJnZn/RPRA==">
-<link type=text/css rel=stylesheet href=/css/compiled/main.min.4076b9cf114dd23cca017f3365e2205a4c9a4b2c0ef4193ccd08883f76e554aa40f674a8f6e77a1b2895be0975ba8e019b0c59996c2eea32e4970ca4d5221653.css integrity="sha512-QHa5zxFN0jzKAX8zZeIgWkyaSywO9Bk8zQiIP3blVKpA9nSo9ud6GyiVvgl1uo4BmwxZmWwu6jLklwyk1SIWUw==">
-<script>function loadPreferredAppearance(){localStorage.preferredAppearance==="dark"||!("preferredAppearance"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function setPreferredAppearance(a){a=="default"?localStorage.removeItem("preferredAppearance"):localStorage.preferredAppearance=a,loadPreferredAppearance()}loadPreferredAppearance(),window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance)</script>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
-<link rel=manifest href=/site.webmanifest>
-<meta property="og:title" content="Authmap">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://mntn.dev/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://mntn.dev/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://mntn.dev/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://mntn.dev/apple-touch-icon.png>
+<link rel=mask-icon href=https://mntn.dev/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.89.4">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="Authmap">
 <meta property="og:description" content="A service that geolocates unwanted SSH attempts.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://mntn.dev/projects/authmap/"><meta property="article:section" content="projects">
 <meta property="article:published_time" content="2021-02-06T12:00:00-05:00">
-<meta property="article:modified_time" content="2021-02-06T12:00:00-05:00">
+<meta property="article:modified_time" content="2021-02-06T12:00:00-05:00"><meta property="og:site_name" content="mntn.dev">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Authmap">
 <meta name=twitter:description content="A service that geolocates unwanted SSH attempts.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Projects","name":"Authmap","headline":"Authmap","description":"A service that geolocates unwanted SSH attempts.","inLanguage":"en","author":{"@type":"Person","name":"Thomas Gorham"},"creator":{"@type":"Person","name":"Thomas Gorham"},"copyrightHolder":"Thomas Gorham","copyrightYear":"2021","dateCreated":"2021-02-06T12:00:00-05:00","datePublished":"2021-02-06T12:00:00-05:00","dateModified":"2021-02-06T12:00:00-05:00","url":"https:\/\/mntn.dev\/projects\/authmap\/","wordCount":"246","keywords":["golang","ssh","linux"]}</script>
-<meta name=generator content="Hugo 0.89.4">
-<meta name=author content="Thomas Gorham">
-<link href=mailto:tom@mntn.dev rel=me>
-<link href=https://github.com/tgiv014 rel=me>
-<link href=https://instagram.com/tgorham4 rel=me>
-<link href=https://www.linkedin.com/in/thomas-gorham/ rel=me>
-<link href=https://twitter.com/TGorhamIV rel=me>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Projects","item":"https://mntn.dev/projects/"},{"@type":"ListItem","position":2,"name":"Authmap","item":"https://mntn.dev/projects/authmap/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Authmap","name":"Authmap","description":"A service that geolocates unwanted SSH attempts.","keywords":["golang","ssh","linux"],"articleBody":"Shortly after opening up my home server’s ssh port to the world (with only public/private key auth enabled), I started getting a flood of attempted ssh requests from all over the place. Out of curiosity, I wanted to see them plotted out on my Grafana dashboard so I started putting together a small service that reads SSH authentication attempts, parses them, and pushes them into influxdb.\nThis project originally started out as my first foray into Rust. Pretty soon after that, I began experimenting with Golang for systems programming and decided to port what I had made so far into Go. Links for both versions below:\n Authmap (Rust) (Not maintained) Authmap (Go)  Goals I have a few goals to refine this project into something more useful:\n Remove every instance of hardcoding and read all configurables from a YAML file.  Done! Now, the only hardcoded configuration item is the config’s location. The application will also generate a default configuration automatically if a config is not found.   Allow grouping requests from the same IP/location in a smart way.  Done! The ip field is now a tag. This allows grouping by ip and aggregating results within those groups.   Automate downloading the MaxMind GeoIP database.  This will require user interaction since the database has licensing requirements now.   Make the docker container for this package more accessible.  Done! Authmap (go) is now available from docker hub as tgiv014/authmap:latest. See the Authmap repo for installation instructions and an example docker-compose configuration    ","wordCount":"245","inLanguage":"en","datePublished":"2021-02-06T12:00:00-05:00","dateModified":"2021-02-06T12:00:00-05:00","author":{"@type":"Person","name":"Thomas Gorham"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://mntn.dev/projects/authmap/"},"publisher":{"@type":"Organization","name":"mntn.dev","logo":{"@type":"ImageObject","url":"https://mntn.dev/favicon.ico"}}}</script>
 </head>
-<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-800 dark:text-neutral">
-<div>
-<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" rel=me href=/>mntn.dev</a>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://mntn.dev/ accesskey=h title="mntn.dev (Alt + H)">mntn.dev</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
 </div>
-<nav>
-<ul class="flex flex-col list-none sm:flex-row">
-<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
-<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/posts/ title=Posts>Blog</a>
+<ul id=menu>
+<li>
+<a href=https://mntn.dev/search/ title="search (Alt + /)" accesskey=/>
+<span>search</span>
+</a>
 </li>
-<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
-<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/projects/ title=Projects>Projects</a>
+<li>
+<a href=https://mntn.dev/projects/ title=projects>
+<span>projects</span>
+</a>
 </li>
-<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
-<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/categories/ title=Categories>Categories</a>
+<li>
+<a href=https://mntn.dev/categories/ title=categories>
+<span>categories</span>
+</a>
+</li>
+<li>
+<a href=https://mntn.dev/tags/ title=tags>
+<span>tags</span>
+</a>
 </li>
 </ul>
 </nav>
 </header>
-<main class=flex-grow>
-<article class=max-w-prose>
-<header>
-<h1 class="mt-0 text-4xl font-extrabold text-neutral-800 dark:text-neutral">
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://mntn.dev/>Home</a>&nbsp;»&nbsp;<a href=https://mntn.dev/projects/>Projects</a></div>
+<h1 class=post-title>
 Authmap
 </h1>
-<div class="mt-8 mb-12 text-base text-neutral-400 dark:text-neutral-500">
-<div class="flex flex-row items-center">
-<span title="Reading time">2 mins</span>
-</div>
+<div class=post-meta><span title="2021-02-06 12:00:00 -0500 -0500">February 6, 2021</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Thomas Gorham&nbsp;|&nbsp;<a href=https://github.com/tgiv014/blog/projects/authmap/index.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header>
-<section class="prose dark:prose-light">
-<p><img src=/img/authmap.png alt="Authmap Image"></p>
+<div class=post-content><p><img loading=lazy src=/img/authmap.png alt="Authmap Image">
+</p>
 <p>Shortly after opening up my home server&rsquo;s ssh port to the world (with only public/private key auth enabled), I started getting a flood of attempted ssh requests from all over the place. Out of curiosity, I wanted to see them plotted out on my Grafana dashboard so I started putting together a small service that reads SSH authentication attempts, parses them, and pushes them into influxdb.</p>
 <p>This project originally started out as my first foray into Rust. Pretty soon after that, I began experimenting with Golang for systems programming and decided to port what I had made so far into Go. Links for both versions below:</p>
 <ul>
 <li><a href=https://github.com/tgiv014/authmap>Authmap (Rust)</a> (Not maintained)</li>
 <li><a href=https://github.com/tgiv014/authmap_go>Authmap (Go)</a></li>
 </ul>
-<h1 id=goals>Goals <a class=heading-anchor href=#goals aria-label=Anchor>#</a></h1>
+<h1 id=goals>Goals<a hidden class=anchor aria-hidden=true href=#goals>#</a></h1>
 <p>I have a few goals to refine this project into something more useful:</p>
 <ul>
 <li>Remove every instance of hardcoding and read all configurables from a YAML file.
@@ -94,99 +110,28 @@ Authmap
 </ul>
 </li>
 </ul>
-</section>
-<footer class=pt-8>
-<div class=flex>
-<img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src=/img/author.jpeg>
-<div class=place-self-center>
-<div class="text-[0.6rem] leading-3 text-neutral-400 dark:text-neutral-500 uppercase">
-Author
 </div>
-<div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-Thomas Gorham
-</div>
-<div class="text-sm text-neutral-700 dark:text-neutral-400">Software Engineer @ Convictional</div>
-<div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=mailto:tom@mntn.dev target=_blank alt=Email rel="me noopener noreferrer">
-<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="at" class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154.0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458.0-184-82.542-184-184S154.542 72 256 72c100.139.0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518.0 00-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58.0-137.831 62.234-137.831 151.46.0 65.303 36.785 105.87 96 105.87 26.984.0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249.0-36.07-15.623-36.07-40.771.0-44.993 30.779-72.729 58.63-72.729 22.292.0 35.601 15.241 35.601 40.77.0 45.061-33.875 72.73-58.161 72.73z"/></svg>
-</span>
-</a>
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://github.com/tgiv014 target=_blank alt=Github rel="me noopener noreferrer">
-<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentcolor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-</span>
-</a>
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://instagram.com/tgorham4 target=_blank alt=Instagram rel="me noopener noreferrer">
-<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M224.1 141c-63.6.0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1.0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9.0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9.0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9.0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9.0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8.0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-</span>
-</a>
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://www.linkedin.com/in/thomas-gorham/ target=_blank alt=Linkedin rel="me noopener noreferrer">
-<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
-</span>
-</a>
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://twitter.com/TGorhamIV target=_blank alt=Twitter rel="me noopener noreferrer">
-<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645.0 138.72-105.583 298.558-298.558 298.558-59.452.0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055.0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421.0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391.0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04.0-57.828 46.782-104.934 104.934-104.934 30.213.0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-</span>
-</a>
-</div>
-</div>
-</div>
-<div class="pt-8 article-pagination">
-<hr class="border-dotted border-neutral-300 dark:border-neutral-600">
-<div class="flex justify-between pt-3">
-<span>
-<a class=flex href=/projects/generativeart/>
-<span class="mr-3 article-pagination-direction">&larr;</span>
-<span class="flex flex-col">
-<span class="article-pagination-title mt-[0.1rem] leading-6">Generative Art</span>
-<span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
-</span>
-</span>
-</a>
-</span>
-<span>
-<a class="flex text-right" href=/projects/advent/advent/>
-<span class="flex flex-col">
-<span class="article-pagination-title mt-[0.1rem] leading-6">Advent of Code</span>
-<span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
-</span>
-</span>
-<span class="ml-3 article-pagination-direction">&rarr;</span>
-</a>
-</span>
-</div>
-</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://mntn.dev/tags/golang/>golang</a></li>
+<li><a href=https://mntn.dev/tags/ssh/>ssh</a></li>
+<li><a href=https://mntn.dev/tags/linux/>linux</a></li>
+</ul>
 </footer>
 </article>
-</main><footer class=py-10>
-<nav class="pb-4 text-base font-medium text-neutral-400 dark:text-neutral-500">
-<ul class="flex flex-col list-none sm:flex-row">
-<li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
-<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/tags/ title=Tags>Tags</a>
-</li>
-</ul>
-</nav>
-<div class="flex justify-between">
-<div>
-<p class="text-sm text-neutral-400 dark:text-neutral-500">
-&copy;
-2021
-Thomas Gorham
-</p>
-<p class="text-xs text-neutral-300 dark:text-neutral-600">
-Powered by <a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank rel="noopener noreferrer">Congo</a>
-</p>
-</div>
-<div class="text-sm cursor-pointer text-neutral-400 dark:text-neutral-500">
-<button id=dark-toggle onclick="setPreferredAppearance('dark')" oncontextmenu="return setPreferredAppearance('default'),!1" class="inline px-2 py-1 border rounded-md border-neutral-200 dark:hidden hover:text-primary-500 hover:border-primary-400" title="Switch to dark appearance">
-<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M283.211 512c78.962.0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954.0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156.0 00283.211.0c-141.309.0-256 114.511-256 256 0 141.309 114.511 256 256 256z"/></svg>
+</main>
+<footer class=footer>
+<span>&copy; 2021 <a href=https://mntn.dev/>mntn.dev</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
 </span>
-</button>
-<button id=light-toggle onclick="setPreferredAppearance('light')" oncontextmenu="return setPreferredAppearance('default'),!1" class="hidden px-2 py-1 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500" title="Switch to light appearance">
-<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M256 160c-52.9.0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6.0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0s-49.9-131.1.0-181 131.1-49.9 181 0 49.9 131.1.0 181z"/></svg>
-</span>
-</button>
-</div>
-</div>
 </footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
 </body>
 </html>

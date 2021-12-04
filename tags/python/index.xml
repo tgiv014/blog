@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python on mntn.dev</title><link>https://mntn.dev/tags/python/</link><description>Recent content in python on mntn.dev</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 31 May 2021 12:00:00 -0500</lastBuildDate><atom:link href="https://mntn.dev/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Generative Art</title><link>https://mntn.dev/projects/generativeart/</link><pubDate>Mon, 31 May 2021 12:00:00 -0500</pubDate><guid>https://mntn.dev/projects/generativeart/</guid><description>Programs that make pretty pictures.</description></item><item><title>Faster Backtesting with requests-cache</title><link>https://mntn.dev/posts/2-requests-cache/</link><pubDate>Wed, 03 Feb 2021 00:00:00 -0500</pubDate><guid>https://mntn.dev/posts/2-requests-cache/</guid><description>Caching uber-repetitive Yahoo Finance queries</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>python on mntn.dev</title>
+    <link>https://mntn.dev/tags/python/</link>
+    <description>Recent content in python on mntn.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 31 May 2021 12:00:00 -0500</lastBuildDate><atom:link href="https://mntn.dev/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generative Art</title>
+      <link>https://mntn.dev/projects/generativeart/</link>
+      <pubDate>Mon, 31 May 2021 12:00:00 -0500</pubDate>
+      
+      <guid>https://mntn.dev/projects/generativeart/</guid>
+      <description>Programs that make pretty pictures.</description>
+    </item>
+    
+    <item>
+      <title>Faster Backtesting with requests-cache</title>
+      <link>https://mntn.dev/posts/2-requests-cache/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 -0500</pubDate>
+      
+      <guid>https://mntn.dev/posts/2-requests-cache/</guid>
+      <description>Caching uber-repetitive Yahoo Finance queries</description>
+    </item>
+    
+  </channel>
+</rss>
