@@ -19,7 +19,7 @@ Based on these rules, you can build a valid path by starting with an empty list 
 
 # A Fun Way
 
-{{< figure src="treediagram.png">}}
+{{< figure src="treediagram.png" title="a tree">}}
 
 Maybe you're itching for a reason to think about binary trees. You can look at every step in a path as a node in a binary tree. The starting position is the root node. The root node has two child nodes, one for a downward move and one for a rightward move. Each of those nodes have their own children in the same pattern. This means that two of the "grandchild" nodes actually describe different paths to the same point. In the above picture, downward moves are to the left and rightward to the right.
 

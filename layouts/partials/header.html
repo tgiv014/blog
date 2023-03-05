@@ -1,0 +1,72 @@
+<header class="w-full">
+  {{/* CSS functionality for menu toggle */}}
+  <style type="text/css">
+    input#nav-toggle:checked ~ label#show-button {
+      display: none;
+    }
+
+    input#nav-toggle:checked ~ label#hide-button {
+      display: flex;
+    }
+
+    input#nav-toggle:checked ~ #nav-menu {
+      display: block;
+    }
+  </style>
+  <nav
+    class="relative flex items-end justify-between flex-wrap py-4 lg:pt-8 text-stone-300 font-mono"
+  >
+    <a
+      href="{{ .Site.Home.Permalink }}"
+      class="flex items-center font-thin text-3xl lg:text-4xl tracking-tight hover:underline decoration-amber-400"
+    >
+      {{ .Site.Title }}
+    </a>
+
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      id="show-button"
+      for="nav-toggle"
+      class="flex items-center sm:hidden hover:text-amber-400"
+    >
+      <span
+        class="iconify-inline h-6 w-6"
+        data-icon="mdi:menu-down-outline"
+      ></span>
+    </label>
+    <label
+      id="hide-button"
+      for="nav-toggle"
+      class="items-center hidden hover:text-amber-400"
+    >
+      <span
+        class="iconify-inline h-6 w-6"
+        data-icon="mdi:menu-up-outline"
+      ></span>
+    </label>
+
+    <ul
+      id="nav-menu"
+      class="sm:flex w-full sm:w-auto hidden text-xl lg:text-2xl mt-2 sm:mt-0 sm:space-x-6 font-mono font-thin"
+    >
+      {{ with .Site.GetPage "/about" }}
+        <li>
+          <a
+            href="{{ .Permalink }}"
+            class="hover:underline decoration-amber-400 tracking-tight "
+            >{{ .Title }}</a
+          >
+        </li>
+      {{ end }}
+      {{ range .Site.Sections }}
+        <li>
+          <a
+            href="{{ .Permalink }}"
+            class="hover:underline decoration-amber-400 tracking-tight"
+            >{{ .Title }}</a
+          >
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

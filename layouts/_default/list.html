@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <div class="mt-4 md:mt-16 ">
+    {{ range .Pages }}
+      <article class="py-8">
+        <h1
+          class="text-3xl md:text-4xl font-mono text-stone-200 mb-2 font-thin decoration-amber-400"
+        >
+          <a
+            class="no-underline hover:underline"
+            href="{{ .Permalink }}"
+            >{{ .Title }}</a
+          >
+        </h1>
+        <h3 class="font-mono font-thin text-stone-200 mb-2 text-sm md:text-lg">
+          {{ .Date.Format "January 2, 2006" }}
+        </h3>
+        <div class="text-lg md:text-xl text-stone-300 indent-12">
+          <p class="leading-8">
+            {{ .Summary }}
+          </p>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,18 +1,6 @@
 baseURL: "https://mntn.dev/"
 title: mntn.dev
 paginate: 5
-theme: PaperMod
-
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-
-# googleAnalytics: UA-123-45
-
-minify:
-    disableXML: true
-    minifyOutput: true
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -20,104 +8,6 @@ params:
     description: "Thomas Gorham's Work-in-Public Journal"
     keywords: [Blog, Portfolio, Personal, Software, Golang, Mongodb, Startup, Open Source]
     author: Thomas Gorham
-    # images: ["<link or path of image for opengraph, twitter-cards>"]
-    DateFormat: "January 2, 2006"
-    defaultTheme: auto # dark, light
-    disableThemeToggle: false
-
-    profileMode:
-        enabled: true # needs to be explicitly set
-        title: mntn.dev
-        subtitle: "Thomas Gorham's Work-in-Public Journal"
-        imageUrl: "img/author.jpeg"
-        imageWidth: 120
-        imageHeight: 120
-        imageTitle: "Profile picture of author"
-        buttons:
-            - name: Posts
-              url: posts
-            - name: Projects
-              url: projects
-
-    ShowReadingTime: true
-    ShowShareButtons: false
-    ShowPostNavLinks: true
-    ShowBreadCrumbs: true
-    ShowCodeCopyButtons: false
-    disableSpecial1stPost: false
-    disableScrollToTop: false
-    comments: false
-    hidemeta: false
-    hideSummary: false
-    showtoc: false
-    tocopen: false
-
-    socialIcons:
-        - name: twitter
-          url: "https://twitter.com/TGorhamIV"
-        - name: stackoverflow
-          url: "https://stackoverflow.com/story/tgorham"
-        - name: github
-          url: "https://github.com/tgiv014"
-        - name: instagram
-          url: "https://www.instagram.com/tgorham4/"
-
-    # analytics:
-    #     google:
-    #         SiteVerificationTag: "XYZabc"
-    #     bing:
-    #         SiteVerificationTag: "XYZabc"
-    #     yandex:
-    #         SiteVerificationTag: "XYZabc"
-
-    cover:
-        hidden: true # hide everywhere but not in structured data
-        hiddenInList: true # hide on list pages and home
-        hiddenInSingle: true # hide on single page
-
-    editPost:
-        URL: "https://github.com/tgiv014/blog"
-        Text: "Suggest Changes" # edit text
-        appendFilePath: true # to append file path to Edit link
-
-    # for search
-    # https://fusejs.io/api/options.html
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
-menu:
-    main:
-        - identifier: search
-          name: search
-          url: /search/
-          weight: 10
-        - identifier: projects
-          name: projects
-          url: /projects/
-          weight: 20
-        - identifier: categories
-          name: categories
-          url: /categories/
-          weight: 30
-        - identifier: tags
-          name: tags
-          url: /tags/
-          weight: 40
-
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-# pygmentsUseClasses: true
-# markup:
-#     highlight:
-#         # anchorLineNos: true
-#         codeFences: true
-#         guessSyntax: true
-#         lineNos: true
-#         style: monokai
 
 outputs:
     home:
