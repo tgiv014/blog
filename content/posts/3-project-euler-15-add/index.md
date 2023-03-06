@@ -1,17 +1,20 @@
 ---
-title:  "Project Euler Problem #15 - Addendum"
-date:   2021-02-06 00:00:00 -0500
+title: "Project Euler Problem #15 - Addendum"
+date: 2021-02-06 00:00:00 -0500
 categories: ["Software"]
 tags: ["algorithms"]
 summary: "Showing a *really* obvious project euler answer that I didn't see before."
+flag: "03"
 ---
 
-*This is an addendum to [this previous post](/blog/project-euler-15).*
+_This is an addendum to [this previous post](/blog/project-euler-15)._
 
 # It's learnin' time
+
 While completing advent of code 2020, I learned about [memoization](https://en.wikipedia.org/wiki/Memoization). I realized that this is a perfect problem to apply the technique to. All we need is a hashmap indexed by our tree coordinates that we'll pass in our recursive function. If there's a cached value for the function inputs, we early return the cached value. In our normal return path we save off the calculated value before actually returning it. It's a simple formula for faster processing.
 
 Without further ado:
+
 ```rust
 use std::collections::HashMap;
 
@@ -44,7 +47,7 @@ fn build_node(x:u32, y:u32, cache:&mut HashMap<Coordinate, u64>) -> u64 {
     if y < N {
         sum += build_node(x, y + 1, cache);
     }
-    
+
     cache.insert(c, sum);
     return sum;
 }

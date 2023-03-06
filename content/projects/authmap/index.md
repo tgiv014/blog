@@ -5,7 +5,7 @@ summary: "A service that geolocates unwanted SSH attempts."
 tags: ["golang", "ssh", "linux"]
 ---
 
-![Authmap Image](/img/authmap.png)
+![Authmap Image](authmap.png)
 
 Shortly after opening up my home server's ssh port to the world (with only public/private key auth enabled), I started getting a flood of attempted ssh requests from all over the place. Out of curiosity, I wanted to see them plotted out on my Grafana dashboard so I started putting together a small service that reads SSH authentication attempts, parses them, and pushes them into influxdb.
 
