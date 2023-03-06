@@ -2,10 +2,10 @@
   <div class="text-stone-300">
     <div class="relative py-8 lg:py-16 mt-4 lg:mt-24 grid grid-cols-1 md:grid-cols-2 mx-auto">
       <div class="col-span-1 md:col-span-2 font-mono font-thin text-3xl lg:text-4xl mb-8">
-        <h1 class="mb-2 lg:mb-4 lg:text-5xl">I'm Thomas</h1>
+        <h1 class="mb-2 lg:mb-4 italic">I'm Thomas.</h1>
         <div class=" space-y-2">
           <p>
-            I write code at
+            I write software at
             <a
               class="text-sky-500 hover:underline"
               href="https://www.convictional.com"
@@ -13,25 +13,6 @@
             >.
           </p>
         </div>
-      </div>
-      <div class="col-span-1">
-        <h2 class="text-4xl italic font-mono font-thin">
-          Posts
-        </h2>
-        {{ range .Pages }}
-          <div class="mb-4">
-            <a
-              class="text-sky-500 hover:underline"
-              href="{{ .Permalink }}"
-              >{{ .Title }}</a
-            >
-          </div>
-        {{ end }}
-      </div>
-      <div class="col-span-1">
-        <h2 class="text-4xl italic font-mono font-thin">
-          Projects
-        </h2>
       </div>
     </div>
   </div>

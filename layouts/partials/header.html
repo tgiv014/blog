@@ -14,11 +14,11 @@
     }
   </style>
   <nav
-    class="relative flex items-end justify-between flex-wrap py-4 lg:pt-8 text-stone-300 font-mono"
+    class="relative flex items-end justify-between flex-wrap py-4 lg:pt-8 text-stone-300 font-mono font-thin text-3xl md:text-4xl"
   >
     <a
       href="{{ .Site.Home.Permalink }}"
-      class="flex items-center font-thin text-3xl lg:text-4xl italic hover:underline decoration-amber-400"
+      class="flex items-center italic hover:underline decoration-amber-400"
     >
       {{ .Site.Title }}
     </a>
@@ -47,7 +47,7 @@
 
     <ul
       id="nav-menu"
-      class="sm:flex w-full sm:w-auto hidden text-xl lg:text-2xl mt-2 sm:mt-0 sm:space-x-6 font-mono font-thin"
+      class="sm:flex w-full sm:w-auto hidden mt-2 sm:mt-0 sm:space-x-6 text-base md:text-xl"
     >
       {{ with .Site.GetPage "/about" }}
         <li>
