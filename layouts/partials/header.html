@@ -27,22 +27,16 @@
     <label
       id="show-button"
       for="nav-toggle"
-      class="flex items-center sm:hidden hover:text-amber-400"
+      class="flex items-center sm:hidden hover:text-amber-400 h-full"
     >
-      <span
-        class="iconify-inline h-6 w-6"
-        data-icon="mdi:menu-down-outline"
-      ></span>
+      ↓
     </label>
     <label
       id="hide-button"
       for="nav-toggle"
       class="items-center hidden hover:text-amber-400"
     >
-      <span
-        class="iconify-inline h-6 w-6"
-        data-icon="mdi:menu-up-outline"
-      ></span>
+      ↑
     </label>
 
     <ul
@@ -50,22 +44,21 @@
       class="sm:flex w-full sm:w-auto hidden mt-2 sm:mt-0 sm:space-x-6 text-base md:text-xl"
     >
       {{ with .Site.GetPage "/about" }}
-        <li>
-          <a
-            href="{{ .Permalink }}"
-            class="hover:underline decoration-amber-400 tracking-tight "
-            >{{ .Title }}</a
-          >
-        </li>
-      {{ end }}
-      {{ range .Site.Sections }}
-        <li>
-          <a
-            href="{{ .Permalink }}"
-            class="hover:underline decoration-amber-400 tracking-tight"
-            >{{ .Title }}</a
-          >
-        </li>
+      <li>
+        <a
+          href="{{ .Permalink }}"
+          class="hover:underline decoration-amber-400 tracking-tight"
+          >{{ .Title }}</a
+        >
+      </li>
+      {{ end }} {{ range .Site.Sections }}
+      <li>
+        <a
+          href="{{ .Permalink }}"
+          class="hover:underline decoration-amber-400 tracking-tight"
+          >{{ .Title }}</a
+        >
+      </li>
       {{ end }}
     </ul>
   </nav>
