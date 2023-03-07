@@ -44,21 +44,22 @@
       class="sm:flex w-full sm:w-auto hidden mt-2 sm:mt-0 sm:space-x-6 text-base md:text-xl"
     >
       {{ with .Site.GetPage "/about" }}
-      <li>
-        <a
-          href="{{ .Permalink }}"
-          class="hover:underline decoration-amber-400 tracking-tight"
-          >{{ .Title }}</a
-        >
-      </li>
-      {{ end }} {{ range .Site.Sections }}
-      <li>
-        <a
-          href="{{ .Permalink }}"
-          class="hover:underline decoration-amber-400 tracking-tight"
-          >{{ .Title }}</a
-        >
-      </li>
+        <li>
+          <a
+            href="{{ .Permalink }}"
+            class="hover:underline decoration-amber-400 tracking-tight"
+            >{{ .Title }}</a
+          >
+        </li>
+      {{ end }}
+      {{ range .Site.Sections }}
+        <li>
+          <a
+            href="{{ .Permalink }}"
+            class="hover:underline decoration-amber-400 tracking-tight"
+            >{{ .Title }}</a
+          >
+        </li>
       {{ end }}
     </ul>
   </nav>
