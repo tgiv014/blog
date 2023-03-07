@@ -3,14 +3,19 @@ title: mntn.dev
 paginate: 5
 
 params:
-    env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: mntn.dev
-    description: "Thomas Gorham's Work-in-Public Journal"
-    keywords: [Blog, Portfolio, Personal, Software, Golang, Mongodb, Startup, Open Source]
-    author: Thomas Gorham
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: mntn.dev
+  description: "Thomas Gorham's Work-in-Public Journal"
+  keywords:
+    [Blog, Portfolio, Personal, Software, Golang, Mongodb, Startup, Open Source]
+  author: Thomas Gorham
 
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # is necessary
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+markup:
+  highlight:
+    style: gruvbox
