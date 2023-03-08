@@ -3,7 +3,7 @@
     <div class="flex border-b-2 border-stone-300 mb-8 font-mono gap-2 md:gap-4">
       {{- if .Params.flag }}
         <div class="flex flex-col">
-          <h1 class="text-3xl md:text-7xl text-stone-300">
+          <h1 class="text-3xl md:text-7xl text-stone-300 mb-2">
             {{ .Params.flag }}
           </h1>
           <div class="flex-1 relative">
@@ -34,7 +34,7 @@
       <div class="flex-1">
         <h2 class="text-3xl md:text-4xl text-stone-300">{{ .Title }}</h2>
 
-        <h3 class="font-mono text-base md:text-lg text-stone-200">
+        <h3 class="font-mono text-base md:text-lg text-stone-200 mb-2">
           {{ .Date.Format "January 2, 2006" }}
         </h3>
       </div>
