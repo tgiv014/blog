@@ -1,18 +1,5 @@
 <header class="w-full">
   {{/* CSS functionality for menu toggle */}}
-  <style type="text/css">
-    input#nav-toggle:checked ~ label#show-button {
-      display: none;
-    }
-
-    input#nav-toggle:checked ~ label#hide-button {
-      display: flex;
-    }
-
-    input#nav-toggle:checked ~ #nav-menu {
-      display: block;
-    }
-  </style>
   <nav
     class="relative flex items-end justify-between flex-wrap py-4 lg:pt-8 text-stone-300 font-mono text-3xl md:text-4xl"
   >
@@ -23,25 +10,9 @@
       {{ .Site.Title }}
     </a>
 
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      id="show-button"
-      for="nav-toggle"
-      class="flex items-center sm:hidden hover:text-amber-400 h-full"
-    >
-      ↓
-    </label>
-    <label
-      id="hide-button"
-      for="nav-toggle"
-      class="items-center hidden hover:text-amber-400"
-    >
-      ↑
-    </label>
-
     <ul
       id="nav-menu"
-      class="sm:flex w-full sm:w-auto hidden mt-2 sm:mt-0 sm:space-x-6 text-base md:text-xl"
+      class="sm:flex w-full sm:w-auto mt-2 sm:mt-0 sm:space-x-6 text-xl"
     >
       {{ with .Site.GetPage "/about" }}
         <li>
