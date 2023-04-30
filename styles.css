@@ -1,7 +1,5 @@
-
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: normal;
 	font-style: normal;
@@ -10,7 +8,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: normal;
 	font-style: oblique;
@@ -19,7 +16,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-thinoblique.ttf') format('truetype'), url('woff2/iosevka-aile-thinoblique.woff2') format('woff2');
@@ -27,7 +23,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: normal;
 	font-style: italic;
@@ -36,7 +31,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: normal;
 	font-style: normal;
@@ -45,7 +39,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: normal;
 	font-style: oblique;
@@ -54,7 +47,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-extralightoblique.ttf') format('truetype'), url('woff2/iosevka-aile-extralightoblique.woff2') format('woff2');
@@ -62,7 +54,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: normal;
 	font-style: italic;
@@ -71,7 +62,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: normal;
 	font-style: normal;
@@ -80,7 +70,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: normal;
 	font-style: oblique;
@@ -89,7 +78,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-lightoblique.ttf') format('truetype'), url('woff2/iosevka-aile-lightoblique.woff2') format('woff2');
@@ -97,7 +85,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: normal;
 	font-style: italic;
@@ -106,7 +93,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: normal;
@@ -115,7 +101,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: oblique;
@@ -124,7 +109,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-oblique.ttf') format('truetype'), url('woff2/iosevka-aile-oblique.woff2') format('woff2');
@@ -132,7 +116,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: italic;
@@ -141,7 +124,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
@@ -150,7 +132,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: oblique;
@@ -159,7 +140,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-mediumoblique.ttf') format('truetype'), url('woff2/iosevka-aile-mediumoblique.woff2') format('woff2');
@@ -167,7 +147,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: italic;
@@ -176,7 +155,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: normal;
 	font-style: normal;
@@ -185,7 +163,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: normal;
 	font-style: oblique;
@@ -194,7 +171,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-semiboldoblique.ttf') format('truetype'), url('woff2/iosevka-aile-semiboldoblique.woff2') format('woff2');
@@ -202,7 +178,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: normal;
 	font-style: italic;
@@ -211,7 +186,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: normal;
@@ -220,7 +194,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: oblique;
@@ -229,7 +202,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-boldoblique.ttf') format('truetype'), url('woff2/iosevka-aile-boldoblique.woff2') format('woff2');
@@ -237,7 +209,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: italic;
@@ -246,7 +217,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: normal;
 	font-style: normal;
@@ -255,7 +225,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: normal;
 	font-style: oblique;
@@ -264,7 +233,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-extraboldoblique.ttf') format('truetype'), url('woff2/iosevka-aile-extraboldoblique.woff2') format('woff2');
@@ -272,7 +240,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: normal;
 	font-style: italic;
@@ -281,7 +248,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: normal;
 	font-style: normal;
@@ -290,7 +256,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: normal;
 	font-style: oblique;
@@ -299,7 +264,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web Oblique';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: normal;
 	src: url('ttf/iosevka-aile-heavyoblique.ttf') format('truetype'), url('woff2/iosevka-aile-heavyoblique.woff2') format('woff2');
@@ -307,7 +271,6 @@
 
 @font-face {
 	font-family: 'Iosevka Aile Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: normal;
 	font-style: italic;
@@ -316,7 +279,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: normal;
 	font-style: normal;
@@ -325,7 +287,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: expanded;
 	font-style: normal;
@@ -334,7 +295,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: normal;
 	font-style: oblique;
@@ -343,7 +303,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: normal;
 	src: url('ttf/iosevka-thinoblique.ttf') format('truetype'), url('woff2/iosevka-thinoblique.woff2') format('woff2');
@@ -351,7 +310,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -360,7 +318,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedthinoblique.ttf') format('truetype'), url('woff2/iosevka-extendedthinoblique.woff2') format('woff2');
@@ -368,7 +325,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: normal;
 	font-style: italic;
@@ -377,7 +333,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 100;
 	font-stretch: expanded;
 	font-style: italic;
@@ -386,7 +341,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: normal;
 	font-style: normal;
@@ -395,7 +349,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: expanded;
 	font-style: normal;
@@ -404,7 +357,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: normal;
 	font-style: oblique;
@@ -413,7 +365,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: normal;
 	src: url('ttf/iosevka-extralightoblique.ttf') format('truetype'), url('woff2/iosevka-extralightoblique.woff2') format('woff2');
@@ -421,7 +372,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -430,7 +380,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedextralightoblique.ttf') format('truetype'), url('woff2/iosevka-extendedextralightoblique.woff2') format('woff2');
@@ -438,7 +387,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: normal;
 	font-style: italic;
@@ -447,7 +395,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 200;
 	font-stretch: expanded;
 	font-style: italic;
@@ -456,7 +403,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: normal;
 	font-style: normal;
@@ -465,7 +411,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: expanded;
 	font-style: normal;
@@ -474,7 +419,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: normal;
 	font-style: oblique;
@@ -483,7 +427,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: normal;
 	src: url('ttf/iosevka-lightoblique.ttf') format('truetype'), url('woff2/iosevka-lightoblique.woff2') format('woff2');
@@ -491,7 +434,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -500,7 +442,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedlightoblique.ttf') format('truetype'), url('woff2/iosevka-extendedlightoblique.woff2') format('woff2');
@@ -508,7 +449,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: normal;
 	font-style: italic;
@@ -517,7 +457,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 300;
 	font-stretch: expanded;
 	font-style: italic;
@@ -526,7 +465,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: normal;
@@ -535,7 +473,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: expanded;
 	font-style: normal;
@@ -544,7 +481,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: oblique;
@@ -553,7 +489,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	src: url('ttf/iosevka-oblique.ttf') format('truetype'), url('woff2/iosevka-oblique.woff2') format('woff2');
@@ -561,7 +496,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -570,7 +504,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedoblique.ttf') format('truetype'), url('woff2/iosevka-extendedoblique.woff2') format('woff2');
@@ -578,7 +511,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: italic;
@@ -587,7 +519,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 400;
 	font-stretch: expanded;
 	font-style: italic;
@@ -596,7 +527,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
@@ -605,7 +535,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: expanded;
 	font-style: normal;
@@ -614,7 +543,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: oblique;
@@ -623,7 +551,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: normal;
 	src: url('ttf/iosevka-mediumoblique.ttf') format('truetype'), url('woff2/iosevka-mediumoblique.woff2') format('woff2');
@@ -631,7 +558,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -640,7 +566,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedmediumoblique.ttf') format('truetype'), url('woff2/iosevka-extendedmediumoblique.woff2') format('woff2');
@@ -648,7 +573,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: italic;
@@ -657,7 +581,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 500;
 	font-stretch: expanded;
 	font-style: italic;
@@ -666,7 +589,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: normal;
 	font-style: normal;
@@ -675,7 +597,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: expanded;
 	font-style: normal;
@@ -684,7 +605,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: normal;
 	font-style: oblique;
@@ -693,7 +613,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: normal;
 	src: url('ttf/iosevka-semiboldoblique.ttf') format('truetype'), url('woff2/iosevka-semiboldoblique.woff2') format('woff2');
@@ -701,7 +620,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -710,7 +628,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedsemiboldoblique.ttf') format('truetype'), url('woff2/iosevka-extendedsemiboldoblique.woff2') format('woff2');
@@ -718,7 +635,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: normal;
 	font-style: italic;
@@ -727,7 +643,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 600;
 	font-stretch: expanded;
 	font-style: italic;
@@ -736,7 +651,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: normal;
@@ -745,7 +659,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: expanded;
 	font-style: normal;
@@ -754,7 +667,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: oblique;
@@ -763,7 +675,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	src: url('ttf/iosevka-boldoblique.ttf') format('truetype'), url('woff2/iosevka-boldoblique.woff2') format('woff2');
@@ -771,7 +682,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -780,7 +690,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedboldoblique.ttf') format('truetype'), url('woff2/iosevka-extendedboldoblique.woff2') format('woff2');
@@ -788,7 +697,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: italic;
@@ -797,7 +705,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 700;
 	font-stretch: expanded;
 	font-style: italic;
@@ -806,7 +713,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: normal;
 	font-style: normal;
@@ -815,7 +721,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: expanded;
 	font-style: normal;
@@ -824,7 +729,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: normal;
 	font-style: oblique;
@@ -833,7 +737,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: normal;
 	src: url('ttf/iosevka-extraboldoblique.ttf') format('truetype'), url('woff2/iosevka-extraboldoblique.woff2') format('woff2');
@@ -841,7 +744,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -850,7 +752,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedextraboldoblique.ttf') format('truetype'), url('woff2/iosevka-extendedextraboldoblique.woff2') format('woff2');
@@ -858,7 +759,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: normal;
 	font-style: italic;
@@ -867,7 +767,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 800;
 	font-stretch: expanded;
 	font-style: italic;
@@ -876,7 +775,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: normal;
 	font-style: normal;
@@ -885,7 +783,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: expanded;
 	font-style: normal;
@@ -894,7 +791,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: normal;
 	font-style: oblique;
@@ -903,7 +799,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: normal;
 	src: url('ttf/iosevka-heavyoblique.ttf') format('truetype'), url('woff2/iosevka-heavyoblique.woff2') format('woff2');
@@ -911,7 +806,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: expanded;
 	font-style: oblique;
@@ -920,7 +814,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web Oblique';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: expanded;
 	src: url('ttf/iosevka-extendedheavyoblique.ttf') format('truetype'), url('woff2/iosevka-extendedheavyoblique.woff2') format('woff2');
@@ -928,7 +821,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: normal;
 	font-style: italic;
@@ -937,7 +829,6 @@
 
 @font-face {
 	font-family: 'Iosevka Web';
-	font-display: swap;
 	font-weight: 900;
 	font-stretch: expanded;
 	font-style: italic;
