@@ -1,4 +1,5 @@
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 100;
 	font-stretch: normal;
@@ -7,6 +8,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 100;
 	font-stretch: normal;
@@ -15,6 +17,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 100;
 	font-stretch: normal;
@@ -22,6 +25,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 100;
 	font-stretch: normal;
@@ -30,6 +34,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 200;
 	font-stretch: normal;
@@ -38,6 +43,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 200;
 	font-stretch: normal;
@@ -46,6 +52,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 200;
 	font-stretch: normal;
@@ -53,6 +60,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 200;
 	font-stretch: normal;
@@ -61,6 +69,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 300;
 	font-stretch: normal;
@@ -69,6 +78,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 300;
 	font-stretch: normal;
@@ -77,6 +87,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 300;
 	font-stretch: normal;
@@ -84,6 +95,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 300;
 	font-stretch: normal;
@@ -92,6 +104,8 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
+	
 	font-family: 'Iosevka Aile Web';
 	font-weight: 400;
 	font-stretch: normal;
@@ -100,6 +114,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 400;
 	font-stretch: normal;
@@ -108,6 +123,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 400;
 	font-stretch: normal;
@@ -115,6 +131,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 400;
 	font-stretch: normal;
@@ -123,6 +140,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 500;
 	font-stretch: normal;
@@ -131,6 +149,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 500;
 	font-stretch: normal;
@@ -139,6 +158,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 500;
 	font-stretch: normal;
@@ -146,6 +166,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 500;
 	font-stretch: normal;
@@ -154,6 +175,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 600;
 	font-stretch: normal;
@@ -162,6 +184,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 600;
 	font-stretch: normal;
@@ -170,6 +193,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 600;
 	font-stretch: normal;
@@ -177,6 +201,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 600;
 	font-stretch: normal;
@@ -185,6 +210,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 700;
 	font-stretch: normal;
@@ -193,6 +219,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 700;
 	font-stretch: normal;
@@ -201,6 +228,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 700;
 	font-stretch: normal;
@@ -208,6 +236,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 700;
 	font-stretch: normal;
@@ -216,6 +245,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 800;
 	font-stretch: normal;
@@ -224,6 +254,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 800;
 	font-stretch: normal;
@@ -232,6 +263,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 800;
 	font-stretch: normal;
@@ -239,6 +271,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 800;
 	font-stretch: normal;
@@ -247,6 +280,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 900;
 	font-stretch: normal;
@@ -255,6 +289,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 900;
 	font-stretch: normal;
@@ -263,6 +298,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web Oblique';
 	font-weight: 900;
 	font-stretch: normal;
@@ -270,6 +306,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Aile Web';
 	font-weight: 900;
 	font-stretch: normal;
@@ -278,6 +315,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 100;
 	font-stretch: normal;
@@ -286,6 +324,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 100;
 	font-stretch: expanded;
@@ -294,6 +333,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 100;
 	font-stretch: normal;
@@ -302,6 +342,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 100;
 	font-stretch: normal;
@@ -309,6 +350,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 100;
 	font-stretch: expanded;
@@ -317,6 +359,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 100;
 	font-stretch: expanded;
@@ -324,6 +367,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 100;
 	font-stretch: normal;
@@ -332,6 +376,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 100;
 	font-stretch: expanded;
@@ -340,6 +385,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 200;
 	font-stretch: normal;
@@ -348,6 +394,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 200;
 	font-stretch: expanded;
@@ -356,6 +403,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 200;
 	font-stretch: normal;
@@ -364,6 +412,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 200;
 	font-stretch: normal;
@@ -371,6 +420,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 200;
 	font-stretch: expanded;
@@ -379,6 +429,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 200;
 	font-stretch: expanded;
@@ -386,6 +437,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 200;
 	font-stretch: normal;
@@ -394,6 +446,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 200;
 	font-stretch: expanded;
@@ -402,6 +455,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 300;
 	font-stretch: normal;
@@ -410,6 +464,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 300;
 	font-stretch: expanded;
@@ -418,6 +473,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 300;
 	font-stretch: normal;
@@ -426,6 +482,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 300;
 	font-stretch: normal;
@@ -433,6 +490,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 300;
 	font-stretch: expanded;
@@ -441,6 +499,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 300;
 	font-stretch: expanded;
@@ -448,6 +507,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 300;
 	font-stretch: normal;
@@ -456,6 +516,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 300;
 	font-stretch: expanded;
@@ -464,6 +525,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 400;
 	font-stretch: normal;
@@ -472,6 +534,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 400;
 	font-stretch: expanded;
@@ -480,6 +543,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 400;
 	font-stretch: normal;
@@ -488,6 +552,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 400;
 	font-stretch: normal;
@@ -495,6 +560,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 400;
 	font-stretch: expanded;
@@ -503,6 +569,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 400;
 	font-stretch: expanded;
@@ -510,6 +577,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 400;
 	font-stretch: normal;
@@ -518,6 +586,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 400;
 	font-stretch: expanded;
@@ -526,6 +595,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 500;
 	font-stretch: normal;
@@ -534,6 +604,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 500;
 	font-stretch: expanded;
@@ -542,6 +613,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 500;
 	font-stretch: normal;
@@ -550,6 +622,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 500;
 	font-stretch: normal;
@@ -557,6 +630,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 500;
 	font-stretch: expanded;
@@ -565,6 +639,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 500;
 	font-stretch: expanded;
@@ -572,6 +647,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 500;
 	font-stretch: normal;
@@ -580,6 +656,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 500;
 	font-stretch: expanded;
@@ -588,6 +665,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 600;
 	font-stretch: normal;
@@ -596,6 +674,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 600;
 	font-stretch: expanded;
@@ -604,6 +683,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 600;
 	font-stretch: normal;
@@ -612,6 +692,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 600;
 	font-stretch: normal;
@@ -619,6 +700,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 600;
 	font-stretch: expanded;
@@ -627,6 +709,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 600;
 	font-stretch: expanded;
@@ -634,6 +717,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 600;
 	font-stretch: normal;
@@ -642,6 +726,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 600;
 	font-stretch: expanded;
@@ -650,6 +735,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 700;
 	font-stretch: normal;
@@ -658,6 +744,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 700;
 	font-stretch: expanded;
@@ -666,6 +753,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 700;
 	font-stretch: normal;
@@ -674,6 +762,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 700;
 	font-stretch: normal;
@@ -681,6 +770,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 700;
 	font-stretch: expanded;
@@ -689,6 +779,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 700;
 	font-stretch: expanded;
@@ -696,6 +787,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 700;
 	font-stretch: normal;
@@ -704,6 +796,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 700;
 	font-stretch: expanded;
@@ -712,6 +805,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 800;
 	font-stretch: normal;
@@ -720,6 +814,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 800;
 	font-stretch: expanded;
@@ -728,6 +823,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 800;
 	font-stretch: normal;
@@ -736,6 +832,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 800;
 	font-stretch: normal;
@@ -743,6 +840,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 800;
 	font-stretch: expanded;
@@ -751,6 +849,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 800;
 	font-stretch: expanded;
@@ -758,6 +857,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 800;
 	font-stretch: normal;
@@ -766,6 +866,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 800;
 	font-stretch: expanded;
@@ -774,6 +875,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 900;
 	font-stretch: normal;
@@ -782,6 +884,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 900;
 	font-stretch: expanded;
@@ -790,6 +893,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 900;
 	font-stretch: normal;
@@ -798,6 +902,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 900;
 	font-stretch: normal;
@@ -805,6 +910,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 900;
 	font-stretch: expanded;
@@ -813,6 +919,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web Oblique';
 	font-weight: 900;
 	font-stretch: expanded;
@@ -820,6 +927,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 900;
 	font-stretch: normal;
@@ -828,6 +936,7 @@
 }
 
 @font-face {
+	font-feature-settings: "cv31" 6;
 	font-family: 'Iosevka Web';
 	font-weight: 900;
 	font-stretch: expanded;
