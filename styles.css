@@ -1661,6 +1661,7 @@ video {
 	color: #fbbf24;
 	font-weight: 600;
 	font-size: 0.875em;
+	font-stretch: expanded;
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *))::before {
