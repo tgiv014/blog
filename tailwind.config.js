@@ -8,16 +8,14 @@ module.exports = {
         mono: ["Iosevka Web", "monospace"],
         sans: ["Iosevka Aile Web", "sans-serif"]
       },
-      backgroundImage: {
-        "wave-pattern": "url('/img/wave.svg')",
-      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             "code::before": {content: ''},
             "code::after": {content: ''},
             "code":{
-              color: theme('colors.amber.400')
+              color: theme('colors.amber.400'),
+              "font-stretch": "expanded",
             },
             "h1 code": {
               color: theme('colors.amber.400')},
