@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Berkeley Mono", "monospace"],
+        mono: ["Iosevka Web", "monospace"],
+        sans: ["Iosevka Aile Web", "sans-serif"]
       },
       backgroundImage: {
         "wave-pattern": "url('/img/wave.svg')",

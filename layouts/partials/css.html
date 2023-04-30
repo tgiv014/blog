@@ -1,16 +1,7 @@
-{{ $styles := resources.Get "/css/tailwind.css" }}
-{{ $styles = $styles |
-  resources.PostCSS
-}}
-{{ if hugo.IsProduction }}
-  {{- with $styles -}}
-<style>
-  {{- .Content | safeCSS -}}
-</style>
-  {{- end -}}
+{{- $styles := resources.Get "styles.css" | postCSS -}}
+{{- if .Site.IsServer }}
+{{ $styles = $styles | resources.ExecuteAsTemplate (printf "styles.dev.%v.css" now.UnixMilli) .}}
 {{ else }}
-  {{ $styles = $styles | resources.ExecuteAsTemplate
-    (printf "css/index.dev.%v.css" now.UnixMilli) .
-  }}
-  <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
-{{ end }}
+{{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
+{{ end -}}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
