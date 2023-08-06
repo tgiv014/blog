@@ -11,20 +11,20 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            "code::before": {content: ''},
-            "code::after": {content: ''},
+            // "code::before": {content: ''},
+            // "code::after": {content: ''},
             "code":{
-              color: theme('colors.amber.400'),
+              color: theme('colors.teal.800'),
               "font-stretch": "expanded",
             },
             "h1 code": {
-              color: theme('colors.amber.400')},
+              color: theme('colors.teal.800')},
             "h2 code": {
-              color: theme('colors.amber.400')},
+              color: theme('colors.teal.800')},
             "h3 code": {
-              color: theme('colors.amber.400')},
+              color: theme('colors.teal.800')},
             "h4 code": {
-              color: theme('colors.amber.400')},
+              color: theme('colors.teal.800')},
           }
         }
       })

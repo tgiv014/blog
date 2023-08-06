@@ -1,13 +1,13 @@
 {{ define "main" }}
-  <article class="justify-self-center mb-4 mt-4 sm:mt-16">
-    <div class="flex border-b-2 border-stone-300 mb-8 gap-2 md:gap-4">
+  <article class="justify-self-center mb-4 mt-4 sm:mt-16 mx-8 lg:mx-0">
+    <div class="flex border-b-2 border-stone-700 mb-8 gap-2 md:gap-4">
       {{- if .Params.flag }}
         <div class="flex flex-col">
-          <h1 class="text-3xl md:text-7xl text-stone-300 mb-2">
+          <h1 class="text-3xl md:text-7xl text-stone-800 mb-2">
             {{ .Params.flag }}
           </h1>
           <div class="flex-1 relative">
-            <svg class="absolute text-stone-300 w-full h-full">
+            <svg class="absolute text-stone-900 w-full h-full">
               <defs>
                 <pattern
                   id="wave"
@@ -32,16 +32,16 @@
 
 
       <div class="flex-1">
-        <h2 class="text-3xl md:text-4xl text-stone-300">{{ .Title }}</h2>
+        <h2 class="text-3xl md:text-4xl text-stone-900">{{ .Title }}</h2>
 
-        <h3 class="font-mono text-base md:text-lg text-stone-200 mb-2">
+        <h3 class="font-mono text-base md:text-lg text-stone-800 mb-2">
           {{ .Date.Format "January 2, 2006" }}
         </h3>
       </div>
     </div>
 
     <div
-      class="prose prose-sm prose-invert max-w-none md:prose-lg prose-p:text-stone-300 prose-headings:text-stone-300 prose-p:indent-12 prose-pre:rounded-xl prose-pre:bg-stone-800 prose-blockquote:border-l-8 prose-img:mx-auto prose-figcaption:text-center hover:prose-a:decoration-amber-400 prose-hr:border-stone-300"
+      class="prose prose-sm max-w-none md:prose-lg prose-p:text-stone-900 prose-headings:text-stone-900 prose-p:indent-12 prose-pre:rounded-xl prose-pre:bg-stone-800 prose-blockquote:border-l-8 prose-img:mx-auto prose-figcaption:text-center hover:prose-a:decoration-amber-400 prose-hr:border-stone-300"
     >
       {{ .Content }}
     </div>
