@@ -2199,6 +2199,10 @@ video {
 	grid-column: span 1 / span 1;
 }
 
+.-m-8 {
+	margin: -2rem;
+}
+
 .mx-8 {
 	margin-left: 2rem;
 	margin-right: 2rem;
@@ -2239,6 +2243,10 @@ video {
 
 .mt-4 {
 	margin-top: 1rem;
+}
+
+.mt-8 {
+	margin-top: 2rem;
 }
 
 .block {
@@ -3003,6 +3011,10 @@ video {
 
 	.lg\:mb-4 {
 		margin-bottom: 1rem;
+	}
+
+	.lg\:mt-12 {
+		margin-top: 3rem;
 	}
 
 	.lg\:mt-24 {
