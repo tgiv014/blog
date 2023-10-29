@@ -1,4 +1,5 @@
 var fragment_default = `
+uniform float time;
 varying vec3 v_color;
 
 //	Simplex 3D Noise 
@@ -78,7 +79,8 @@ float snoise(vec3 v){
 
 void main() {
     float bw_noise = snoise(vec3(gl_FragCoord.x,91.5*gl_FragCoord.y,1));
-    gl_FragColor = vec4(v_color,1)+vec4(0.05*vec3(bw_noise),1);
+    float alpha_fade = min(1.0, time*40.0);
+    gl_FragColor = vec4(v_color+0.05*vec3(bw_noise),(1.-(1.-alpha_fade)*(1.-alpha_fade)));
 }`;
 
 export {
