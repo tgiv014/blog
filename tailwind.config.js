@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Iosevka Web", "monospace"],
-        sans: ["Iosevka Aile Web", "sans-serif"]
+        mono: ["IBM Plex Mono", "monospace"],
+        sans: ["Nunito", "sans-serif"]
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -15,7 +15,6 @@ module.exports = {
             // "code::after": {content: ''},
             "code":{
               color: theme('colors.teal.800'),
-              "font-stretch": "expanded",
             },
             "h1 code": {
               color: theme('colors.teal.800')},

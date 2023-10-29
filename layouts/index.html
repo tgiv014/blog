@@ -1,28 +1,20 @@
 {{ define "main" }}
-
-{{ $built := resources.Get "ts/waves.ts" | js.Build "waves.js" }}
-<script src="{{ $built.RelPermalink }}" defer></script>
+  {{ $built := resources.Get "ts/waves.ts" | js.Build "waves.js" }}
+  <script src="{{ $built.RelPermalink }}" defer></script>
   <div
-    class="text-amber-50 relative mx-auto mt-8 lg:mt-12"
+    class="text-amber-50 text-3xl lg:text-4xl relative h-64 overflow-hidden border-b-2 border-stone-700"
   >
-    <div class="text-3xl lg:text-4xl -m-8 relative h-64 md:rounded-md overflow-hidden">
-      <canvas id="herocanvas" class="absolute w-full h-full">
-      </canvas>
-      <div class="absolute top-8 inset-x-8">
-        <h1 class="font-extrabold italic">
-          I'm Thomas.
-        </h1>         
-      </div>
-      <div class="absolute bottom-8 inset-x-8 text-right">
-        <p>
-          I write software at
-          <a
-            class="font-extrabold italic hover:underline"
-            href="https://www.convictional.com"
-            >Convictional.</a
-          >
-        </p>
-      </div>
+    <canvas id="herocanvas" class="absolute h-full w-full"> </canvas>
+    <div class="absolute top-8 inset-x-8">
+      <h1 class="">I'm Thomas.</h1>
+    </div>
+    <div class="absolute bottom-8 inset-x-8 text-right">
+      <p>
+        I write software at
+        <a class="hover:underline" href="https://www.convictional.com"
+          >Convictional.</a
+        >
+      </p>
     </div>
   </div>
 {{ end }}

@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/tgiv014/blog#readme",
   "devDependencies": {
-    "@types/three": "^0.155.0",
     "@tailwindcss/typography": "^0.5.9",
+    "@types/three": "^0.155.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",

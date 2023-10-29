@@ -1,5 +1,5 @@
-@import "/assets/iosevka-aile.css";
-@import "/assets/iosevka.css";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,8 +9,4 @@
   color: #1c1917;
   background: #fbbf24;
   text-decoration-color: #1c1917;
-}
-
-.font-mono {
-  font-stretch: expanded;
 }
