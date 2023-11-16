@@ -7,11 +7,11 @@ summary: "Three ways to tackle Project Euler Problem #15"
 flag: "01"
 ---
 
-# Intro
+## Intro
 
 [Problem #15](https://projecteuler.net/problem=15) from [Project Euler](https://projecteuler.net/about) is a really interesting problem. Not only is there a clean mathematical solution to the question, but there are a _bunch_ of non-optimal (or even downright ugly) but intuitive ways to solve the problem.
 
-# The Easy Way
+## The easy way
 
 The easiest, and probably fastest, way to solve this problem is to just use math. Consider the rules of the problem:
 
@@ -21,7 +21,7 @@ The easiest, and probably fastest, way to solve this problem is to just use math
 
 Based on these rules, you can build a valid path by starting with an empty list of _2N_ steps, selecting _N_ steps to place a rightward move, and filling the remaining steps with downward moves. This is a [Combination Problem](https://en.wikipedia.org/wiki/Combination)! The number of valid paths you can possibly construct is _2N choose N_.
 
-# A Fun Way
+## A fun way
 
 {{< figure src="treediagram.png" title="a tree">}}
 
@@ -65,7 +65,7 @@ Go get a coffee or two, because this took ~30min to run on my machine.
 
 _Edit: This can be heavily optimized without abandoning the tree structure! More info in [this more recent post](/blog/project-euler-15-addendum)._
 
-# An ugly way
+## An ugly way
 
 Suppose you were told to solve this problem on an FPGA and you have _no clue_ what combination is. Since we know the length of a path is _2N_, we'll start with a _2N_-bit wide counter. Let's say down = 1 and right = 0. We can initialize a down-counter with all 1s and let it run all the way down to 0. Since we know a valid path has #rights=#downs=_N_, we'll look at every counter value and keep track of the number of values which have exactly _N_ ones. That number is the number of possible paths!
 

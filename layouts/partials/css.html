@@ -1,7 +1,14 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+  rel="stylesheet"
+/>
+
 {{- $styles := resources.Get "styles.css" | postCSS -}}
 {{- if .Site.IsServer }}
-{{ $styles = $styles | resources.ExecuteAsTemplate (printf "styles.dev.%v.css" now.UnixMilli) .}}
+  {{ $styles = $styles | resources.ExecuteAsTemplate (printf "styles.dev.%v.css" now.UnixMilli) . }}
 {{ else }}
-{{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
+  {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
 {{ end -}}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />

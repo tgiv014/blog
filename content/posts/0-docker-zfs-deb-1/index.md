@@ -9,11 +9,11 @@ flag: "00"
 
 {{< figure src="zfs_docker_debian.png">}}
 
-# How'd we Get Here...
+## How we got here
 
 A while back, I snagged a Dell R710 from Ebay for $350 delivered. This thing is a virtualization _monster_. 8 cores and 144GB of ECC RAM, perfect for filling with bhyve virtual machines on FreeNAS. This setup worked great for me until I became interested in Docker containers. FreeNAS just doesn't support a docker environment, so let's build something from the ground up and document the process.
 
-# Constraints
+## Constraints
 
 - Must use ZFS (no need for ZFS root)
 - Native docker support
@@ -21,7 +21,7 @@ A while back, I snagged a Dell R710 from Ebay for $350 delivered. This thing is 
 
 With these constraints, we know we absolutely must use Linux and we would really like a distro that has openzfs in its package control. In the past I've used Ubuntu Server and ubuntu 16.04 has zfs available as a package, but I want to avoid snaps like the plague. Because of this, I'm going to use Debian.
 
-# Initial Setup
+## Initial setup
 
 First things first, we're going to shut down the server and remove every drive but our desired boot drive. FreeNAS uses a flash drive as its root storage, but debian doesn't quite support that. In my case, I'm going to use an old 120GB SSD in an optical drive caddy in place of the server's disk drive. It's easy enough to complete the guided install, and Debian has some pretty good installation literature:
 
@@ -36,7 +36,7 @@ I do have a few gotchas during the guided install:
 - I did not install any desktop environments or X server components.
 - Don't forget to select openssh!
 
-# Post-Install
+## Post-install
 
 Now that we have a fully running debian system, let's change a few things. Pop all your drives back in and ssh in.
 
@@ -53,7 +53,7 @@ UsePAM no
 
 Now you can reload sshd and bask in paswordless security strong enough to leave exposed publicly. `$ sudo /etc/init.d/sshd reload`
 
-# ZFS Time
+## ZFS time
 
 Debian makes this one super easy. Check the [official ZFS Debian Wiki Page](https://wiki.debian.org/ZFS) for more info. Use the following commands to install ZFS on Debian.
 
@@ -82,7 +82,7 @@ With the device IDs in hand, I'll make a zpool with:
 $ sudo zpool create tank ata-ST9500325AS_6VESPM0A ata-ST9500325AS_6VESRNXY
 ```
 
-# Docker Install
+## Docker install
 
 This is essentially a summary of the [Docker Docs for Debian](https://docs.docker.com/engine/install/debian/).
 
@@ -145,7 +145,7 @@ Log out and back in
 $ docker run --rm hello-world
 ```
 
-# Let's Hook up Docker and ZFS
+## Let's hook up Docker and ZFS
 
 This part's for the adventurous. You could certainly just make a bunch of ZFS datasets with filesystem mounts and mount those in your containers for bulk storage, but that's no fun! Docker has a [ZFS storage driver](https://docs.docker.com/storage/storagedriver/zfs-driver/) that will back all container, image, and volume storage with zfs. Let's set it up.
 
@@ -200,6 +200,6 @@ Server:
  Cgroup Driver: cgroupfs
 ```
 
-# 🎉 Done!
+## 🎉 Done!
 
 Now we have a server running Debian with Docker using ZFS-backed storage. This would be a great way to put together a NAS setup using samba or NFS with a bunch of self-hosted services. I'll be using Docker to host a home assistant instance with nginx sitting in front as a reverse proxy.
