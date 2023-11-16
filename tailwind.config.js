@@ -5,25 +5,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
-        sans: ["Nunito", "sans-serif"]
+        mono: ["Berkeley Mono", "monospace"],
+        sans: ["Montserrat", "sans-serif"]
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             // "code::before": {content: ''},
             // "code::after": {content: ''},
-            "code":{
-              color: theme('colors.teal.800'),
-            },
-            "h1 code": {
-              color: theme('colors.teal.800')},
-            "h2 code": {
-              color: theme('colors.teal.800')},
-            "h3 code": {
-              color: theme('colors.teal.800')},
-            "h4 code": {
-              color: theme('colors.teal.800')},
           }
         }
       })

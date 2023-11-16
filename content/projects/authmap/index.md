@@ -14,7 +14,7 @@ This project originally started out as my first foray into Rust. Pretty soon aft
 - [Authmap (Rust)](https://github.com/tgiv014/authmap) (Not maintained)
 - [Authmap (Go)](https://github.com/tgiv014/authmap_go)
 
-# Goals
+## Goals
 
 I have a few goals to refine this project into something more useful:
 
