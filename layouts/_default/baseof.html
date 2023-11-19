@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-  <body class="antialiased bg-amber-100 w-full">
-    <div class="bg-amber-50 flex flex-col items-center min-h-screen mx-auto md:max-w-4xl border-x-2 border-stone-700">
+  <body class="antialiased bg-amber-50 w-full">
+    <div
+      class="bg-amber-50 flex flex-col items-center min-h-screen mx-auto md:max-w-4xl border-x-2 border-stone-700"
+    >
       {{- partial "dev/dev-tools.html" . -}}
       {{- partial "header.html" . -}}
+
 
       <main class="flex-1 w-full">
         {{- block "main" . }}{{- end }}
