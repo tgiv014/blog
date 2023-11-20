@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         mono: ["Berkeley Mono", "monospace"],
-        sans: ["Montserrat", "sans-serif"]
+        sans: ["Inter", "sans-serif"]
       },
       typography: (theme) => ({
         DEFAULT: {
