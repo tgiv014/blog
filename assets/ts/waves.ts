@@ -27,8 +27,8 @@ scene.add(plane);
 const canvasResized = (width: number, height: number) => {
   renderer.setSize(width, height, false);
   // geometry.scale(width,height,1);
-  const widthSegments = Math.ceil(width * 0.3);
-  const heightSegments = Math.ceil(height * 0.6);
+  const widthSegments = Math.ceil(width * 0.1);
+  const heightSegments = Math.ceil(height * 0.2);
 
   geometry = new THREE.PlaneGeometry(
     width,

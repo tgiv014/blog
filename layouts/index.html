@@ -5,16 +5,71 @@
     class="text-amber-50 text-3xl lg:text-4xl relative h-64 overflow-hidden border-b-2 border-stone-700 bg-blue-900"
   >
     <canvas id="herocanvas" class="absolute h-full w-full"> </canvas>
-    <div class="absolute top-8 inset-x-8">
-      <h1 class="">I'm Thomas.</h1>
+    <div class="absolute top-8 inset-x-8 md:inset-x-16">
+      <h1 class="">I'm Thomas,</h1>
     </div>
-    <div class="absolute bottom-8 inset-x-8 text-right">
-      <p>
-        I write software at
-        <a class="hover:underline" href="https://www.convictional.com"
-          >Convictional.</a
-        >
-      </p>
+    <div class="absolute bottom-8 inset-x-8 md:inset-x-16 text-right">
+      <p>Software & Hardware Engineer</p>
     </div>
+  </div>
+  <div
+    class="bg-stone-700 grid grid-cols-1 md:grid-cols-2 gap-0.5 border-b-2 border-stone-700"
+  >
+    <div class="bg-amber-50 py-8 px-8 md:px-16">
+      <ul class="text-base md:text-lg flex flex-col gap-2">
+        <li>
+          Software engineer at
+          <a
+            class="text-sky-700 hover:text-sky-900"
+            href="http://www.convictional.com"
+            target="_blank"
+            >Convictional</a
+          >.
+        </li>
+        <li>B.S. in Electrical Engineering</li>
+      </ul>
+    </div>
+    <div class="bg-amber-50 py-8 px-8 md:px-16">
+      <ul class="text-sm md:text-lg flex flex-col gap-4">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/thomas-gorham/"
+            class="hover:text-sky-700"
+          >
+            {{ partial "icon.html" (dict "icon" "linkedin" "classes" "h-8") }}<span
+              class="ml-2"
+              >thomas-gorham</span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="https://www.github.com/tgiv014" class="hover:text-sky-700">
+            {{ partial "icon.html" (dict "icon" "square-github" "classes" "h-8") }}<span
+              class="ml-2"
+              >tgiv014</span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="https://www.github.com/tgorham4" class="hover:text-sky-700">
+            {{ partial "icon.html" (dict "icon" "square-github" "classes" "h-8") }}<span
+              class="ml-2"
+              >tgorham4</span
+            ></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="border-stone-700 text-stone-700 border-b-2 px-8 md:px-16 py-8 font-mono text-base md:text-lg italic"
+  >
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+      <a
+        href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}"
+        class="hover:text-sky-700"
+        >{{ $name }}</a
+      >
+    {{ end }}
   </div>
 {{ end }}

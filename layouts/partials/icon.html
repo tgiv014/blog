@@ -1,0 +1,13 @@
+{{- $fname:=print "icons/" .icon ".svg" -}}
+
+{{- $file:=(readFile $fname) -}}
+
+{{- $path:="<path" -}}
+{{- $pathfill:="<path fill=\"currentColor\"" -}}
+{{- $file:=replace $file $path $pathfill -}}
+
+{{- $svg:="<svg" -}}
+{{- $svgfill:=print "<svg class=\"inline-block align-middle " .classes "\"" -}}
+{{- $file:=replace $file $svg $svgfill -}}
+
+{{ $file | safeHTML }}
