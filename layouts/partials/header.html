@@ -1,11 +1,11 @@
-<header class="w-full px-8 border-b-2 border-stone-700">
+<header class="w-full px-8 md:px-16 border-b-2 border-stone-700">
   {{/* CSS functionality for menu toggle */}}
   <nav
-    class="relative flex items-end justify-between flex-wrap py-4 text-stone-900 text-3xl md:text-4xl"
+    class="relative flex items-end justify-between flex-wrap py-4 text-3xl md:text-4xl"
   >
     <a
       href="{{ .Site.Home.Permalink }}"
-      class="flex items-center hover:underline decoration-amber-400 font-bold"
+      class="flex items-center hover:text-sky-700 font-bold"
     >
       <svg
         height="30"
@@ -13,7 +13,7 @@
         version="1.1"
         style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
       >
-        <g transform="matrix(1,0,0,1,-5.68739,90.7179)">
+        <g transform="matrix(1,0,0,1,-5.68739,90.7179)" fill="currentColor">
           <g transform="matrix(48,0,0,48,9.15139,-53.5099)">
             <path
               d="M-0.05,-0L0.061,-0L0.144,-0.289C0.175,-0.395 0.199,-0.427 0.25,-0.427C0.285,-0.427 0.288,-0.403 0.263,-0.32L0.169,-0L0.28,-0L0.365,-0.294C0.394,-0.397 0.419,-0.427 0.473,-0.427C0.502,-0.427 0.503,-0.403 0.48,-0.32L0.388,-0L0.499,-0L0.593,-0.326C0.64,-0.487 0.622,-0.535 0.516,-0.535C0.472,-0.535 0.447,-0.516 0.408,-0.452L0.401,-0.452C0.4,-0.516 0.377,-0.535 0.301,-0.535C0.262,-0.535 0.237,-0.517 0.192,-0.458L0.187,-0.458L0.208,-0.522L0.1,-0.522L-0.05,-0Z"
@@ -74,7 +74,7 @@
         <li>
           <a
             href="{{ .Permalink }}"
-            class="hover:underline decoration-amber-400 tracking-tight"
+            class="hover:underline decoration-sky-700 tracking-tight"
             >{{ .Title }}</a
           >
         </li>
@@ -83,7 +83,7 @@
         <li>
           <a
             href="{{ .Permalink }}"
-            class="hover:underline decoration-amber-400 tracking-tight"
+            class="hover:underline decoration-sky-700 tracking-tight"
             >{{ .Title }}</a
           >
         </li>

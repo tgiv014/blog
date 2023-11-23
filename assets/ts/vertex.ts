@@ -96,8 +96,8 @@ void main() {
     vec2 uvNorm = 2.*uv - vec2(1.);
     vec2 p = 0.001 * uvNorm * vec2(width,height);
 
-    float d2 = height*0.5*noise(vec3(
-        0.52*p.x-time*2.0,
+    float d2 = 0.8*height*noise(vec3(
+        1.0*p.x-time*2.0,
         5.1*p.y,
         2.0*time
     ));
@@ -108,7 +108,7 @@ void main() {
     d2 *= 1.0 - pow(abs(uvNorm.y), 2.0);
 
     
-    d2 = max(0.0, d2);
+    d2 = max(-height, d2);
 
     vec3 pos = vec3(
         position.x,
@@ -117,31 +117,29 @@ void main() {
     );
     gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
 
-    
-    
-    
-    v_color = vec3(0.325,0.227,0.443);
+    // #3730a3
+    v_color = vec3(0.216,0.188,0.639);
+
+
     float noise1 = smoothstep(
         0.1,
-        0.6,
+        0.9,
         noise(
             vec3(
-                0.5*p.x-0.21*time,
+                0.5*p.x-0.8*time,
                 3.*p.y,
-                0.2*time+11.
+                1.0*time+11.
             )
         )
     );
+    // #f59e0b
+    vec3 color1 = vec3(0.957,0.619,0.043);
+    v_color = blendNormal(v_color, color1, 0.6*pow(noise1,2.));
 
-    
-    
-    
-    vec3 color1 = vec3(0.176,0.333,0.706);
-    v_color = blendNormal(v_color, color1, pow(noise1,4.));
 
     float noise2 = smoothstep(
         0.1,
-        0.8,
+        0.9,
         noise(
             vec3(
                 0.5*p.x-0.28*time,
@@ -150,17 +148,11 @@ void main() {
             )
         )
     );
+    // #06b6d4
+    vec3 color2 = vec3(0.024,0.714,0.831);
+    v_color = blendNormal(v_color, color2, 0.7*pow(noise2,2.));
 
-    
-    
-    
-    
-    
-    vec3 color2 = vec3(0.2,0.6,0.553);
-    v_color = blendNormal(v_color, color2, pow(noise2,4.));
 
     v_color = clamp(v_color,vec3(0),vec3(1));
 }`;
-export {
-  vertex_default as default
-};
+export { vertex_default as default };

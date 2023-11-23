@@ -1,18 +1,16 @@
 {{ define "main" }}
-  <div class="px-8 border-b-2 border-stone-700">
+  <div class="px-8 md:px-16 border-b-2 border-stone-700">
     {{ range .Pages }}
       <article class="py-8">
-        <h1
-          class="text-2xl md:text-4xl text-stone-900 mb-2 decoration-amber-400"
-        >
+        <h1 class="text-xl md:text-2xl mb-2 decoration-amber-400">
           <a class="no-underline hover:underline" href="{{ .Permalink }}"
             >{{ .Title }}</a
           >
         </h1>
-        <h3 class="text-stone-900 mb-2 text-sm md:text-lg">
+        <h3 class="mb-2 text-stone-700 text-sm md:text-md">
           {{ .Date.Format "January 2, 2006" }}
         </h3>
-        <div class="text-base md:text-xl text-stone-800 indent-12">
+        <div class="text-base md:text-lg indent-12">
           <p class="">{{ .Summary }}</p>
         </div>
       </article>
