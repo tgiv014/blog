@@ -1,0 +1,73 @@
+{{ $src := .Get 0 }}
+{{ if .IsNamedParams }}
+  {{ $src = .Get "src" }}
+{{ end }}
+
+
+<div
+  class="not-prose font-mono italic w-full flex flex-col gap-2 items-center my-4"
+>
+  {{ with $.Page.Resources.Get $src }}
+    {{ with .Resize "900x" }}
+      <img src="{{ .RelPermalink }}" />
+    {{ end }}
+    {{ with .Exif }}
+      {{ $bodydetails := slice }}
+      {{ $lensdetails := slice }}
+
+      {{ with .Date }}
+        {{ $bodydetails = $bodydetails | append (.Format "Jan 02, 2006") }}
+      {{ end }}
+
+      {{ with .Tags.Model }}
+        {{ $bodydetails = $bodydetails | append . }}
+      {{ end }}
+      {{ with .Tags.ApertureValue }}
+        {{ $lensdetails = $lensdetails | append (printf "%v" .) }}
+      {{ end }}
+
+      {{ with .Tags.ExposureTime }}
+        {{ $bodydetails = $bodydetails | append (printf "%s s" .) }}
+      {{ end }}
+
+      {{ with .Tags.FNumber }}
+        {{ $lensdetails = $lensdetails | append (printf "f%.1f" .) }}
+      {{ end }}
+
+      {{ with .Tags.FocalLength }}
+        {{ $lensdetails = $lensdetails | append (printf "%.0fmm" .) }}
+      {{ end }}
+      {{ with .Tags.ISOSpeedRatings }}
+        {{ $bodydetails = $bodydetails | append (printf "ISO %d" .) }}
+      {{ end }}
+      {{ with .Tags.LensModel }}
+        {{ $lensdetails = $lensdetails | append (printf "%s" .) }}
+      {{ end }}
+
+
+      <div class="flex flex-col items-center">
+        {{ if gt ($bodydetails | len) 0 }}
+          <span>
+            {{ range $i, $v := $bodydetails }}
+              <span class="whitespace-nowrap">{{ $v }}</span>
+              {{ if ne (add $i 1) ($bodydetails | len) }}
+                <span>/</span>
+              {{ end }}
+            {{ end }}
+          </span>
+        {{ end }}
+
+        {{ if gt ($lensdetails | len) 0 }}
+          <span class="whitespace-nowrap">
+            {{ range $i, $v := $lensdetails }}
+              <span class="whitespace-nowrap">{{ $v }}</span>
+              {{ if ne (add $i 1) ($lensdetails | len) }}
+                <span>/</span>
+              {{ end }}
+            {{ end }}
+          </span>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
