@@ -2,14 +2,14 @@
   {{ $built := resources.Get "ts/waves.ts" | js.Build "waves.js" }}
   <script src="{{ $built.RelPermalink }}" async></script>
   <div
-    class="text-amber-50 text-2xl lg:text-4xl relative h-48 md:h-64 overflow-hidden border-b border-stone-500 bg-blue-900 font-mono tracking-widest"
+    class="text-amber-50 text-2xl lg:text-4xl relative h-48 md:h-64 overflow-hidden border-b border-stone-500 bg-blue-900 opsz-display font-semibold"
   >
     <canvas id="herocanvas" class="absolute h-full w-full"> </canvas>
     <div class="absolute top-8 inset-x-8 md:inset-x-16">
-      <h1 class="">Thomas<br />Gorham</h1>
+      <h1 class="">Thomas Gorham</h1>
     </div>
     <div class="absolute bottom-8 inset-x-8 md:inset-x-16 text-right">
-      <p>Software<br />& Hardware<br />Engineer</p>
+      <p>Software, Hardware Engineer</p>
     </div>
   </div>
   <div

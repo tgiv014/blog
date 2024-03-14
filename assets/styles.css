@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.opsz-display {
+  font-variation-settings: "opsz" 32;
+}
+
 ::selection {
   color: #1c1917;
   background: #fbbf24;

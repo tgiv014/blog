@@ -2,12 +2,14 @@
   <div class="px-8 md:px-16 border-b border-stone-500">
     {{ range .Pages }}
       <article class="py-8">
-        <h1 class="text-xl md:text-2xl mb-2 decoration-amber-400">
+        <h1
+          class="text-xl md:text-2xl mb-2 decoration-amber-400 opsz-display font-semibold"
+        >
           <a class="no-underline hover:underline" href="{{ .Permalink }}"
             >{{ .Title }}</a
           >
         </h1>
-        <h3 class="mb-2 text-stone-700 text-sm md:text-md">
+        <h3 class="mb-2 text-stone-700 text-sm md:text-md font-mono">
           {{ .Date.Format "January 2, 2006" }}
         </h3>
         <div class="text-base md:text-lg indent-12">
