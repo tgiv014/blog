@@ -1,14 +1,14 @@
-<header class="w-full px-8 md:px-16 border-b border-stone-500">
+<header class="text-sm w-full px-8 md:px-16 border-b border-stone-500">
   {{/* CSS functionality for menu toggle */}}
   <nav
-    class="relative flex items-end justify-between flex-wrap py-4 text-3xl md:text-4xl"
+    class="relative flex items-end justify-between flex-wrap py-4"
   >
     <a
       href="{{ .Site.Home.Permalink }}"
       class="flex items-center hover:text-sky-700 font-bold"
     >
       <svg
-        height="30"
+        height="24"
         viewBox="0 0 220 40"
         version="1.1"
         style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
@@ -68,7 +68,7 @@
 
     <ul
       id="nav-menu"
-      class="flex w-full sm:w-auto mt-2 sm:mt-0 space-x-6 text-xl"
+      class="flex w-full sm:w-auto mt-2 sm:mt-0 space-x-6"
     >
       {{ with .Site.GetPage "/about" }}
         <li>

@@ -2,7 +2,7 @@
   {{ $built := resources.Get "ts/waves.ts" | js.Build "waves.js" }}
   <script src="{{ $built.RelPermalink }}" async></script>
   <div
-    class="text-amber-50 text-2xl lg:text-4xl relative h-48 md:h-64 overflow-hidden border-b border-stone-500 bg-blue-900 opsz-display font-semibold"
+    class="text-2xl text-amber-50 relative h-48 overflow-hidden border-b border-stone-500 bg-blue-900 opsz-display font-semibold"
   >
     <canvas id="herocanvas" class="absolute h-full w-full"> </canvas>
     <div class="absolute top-8 inset-x-8 md:inset-x-16">
@@ -15,8 +15,8 @@
   <div
     class="bg-stone-500 grid grid-cols-1 md:grid-cols-2 gap-px border-b border-stone-500"
   >
-    <div class="bg-stone-100 py-8 px-8 md:px-16">
-      <ul class="text-base md:text-lg flex flex-col gap-2">
+    <div class="text-sm bg-stone-100 py-8 px-8 md:px-16">
+      <ul class="flex flex-col gap-2">
         <li>
           Software engineer at
           <a
@@ -29,14 +29,14 @@
         <li>B.S. in Electrical Engineering</li>
       </ul>
     </div>
-    <div class="bg-stone-100 py-8 px-8 md:px-16">
-      <ul class="text-sm md:text-lg flex flex-col gap-4">
+    <div class="text-sm bg-stone-100 py-8 px-8 md:px-16">
+      <ul class="flex flex-col gap-4">
         <li>
           <a
             href="https://www.linkedin.com/in/thomas-gorham/"
             class="hover:text-sky-700"
           >
-            {{ partial "icon.html" (dict "icon" "linkedin" "classes" "h-8") }}<span
+            {{ partial "icon.html" (dict "icon" "linkedin" "classes" "h-6") }}<span
               class="ml-2"
               >thomas-gorham</span
             ></a
@@ -44,7 +44,7 @@
         </li>
         <li>
           <a href="https://www.github.com/tgiv014" class="hover:text-sky-700">
-            {{ partial "icon.html" (dict "icon" "square-github" "classes" "h-8") }}<span
+            {{ partial "icon.html" (dict "icon" "square-github" "classes" "h-6") }}<span
               class="ml-2"
               >tgiv014</span
             ></a
@@ -52,7 +52,7 @@
         </li>
         <li>
           <a href="https://www.github.com/tgorham4" class="hover:text-sky-700">
-            {{ partial "icon.html" (dict "icon" "square-github" "classes" "h-8") }}<span
+            {{ partial "icon.html" (dict "icon" "square-github" "classes" "h-6") }}<span
               class="ml-2"
               >tgorham4</span
             ></a
@@ -62,7 +62,7 @@
     </div>
   </div>
   <div
-    class="border-stone-500 text-stone-700 border-b px-8 md:px-16 py-8 font-mono text-base md:text-lg italic"
+    class="text-sm border-stone-500 text-stone-700 border-b px-8 md:px-16 py-8 font-mono italic"
   >
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
       <a
