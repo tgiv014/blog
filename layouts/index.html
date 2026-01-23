@@ -3,20 +3,18 @@
   {{ $built := resources.Get "ts/waves.ts" | js.Build $opts }}
   <script src="{{ $built.RelPermalink }}" async></script>
   <div
-    class="opsz-display relative h-48 overflow-hidden border-b border-stone-500 bg-blue-900 text-2xl font-semibold text-amber-50"
+    class="opsz-display relative h-48 overflow-hidden bg-blue-900 text-2xl text-amber-50"
   >
     <canvas id="herocanvas" class="absolute h-full w-full"> </canvas>
-    <div class="absolute inset-x-8 top-8 md:inset-x-16">
+    <div class="absolute inset-x-4 top-4">
       <h1 class="">Thomas Gorham</h1>
     </div>
-    <div class="absolute inset-x-8 bottom-8 text-right md:inset-x-16">
-      <p>Software, Hardware Engineer</p>
+    <div class="absolute inset-x-4 bottom-4">
+      <p>Software,<br />Hardware Engineer</p>
     </div>
   </div>
-  <div
-    class="grid grid-cols-1 gap-px border-b border-stone-500 bg-stone-500 md:grid-cols-2"
-  >
-    <div class="bg-stone-100 px-8 py-8 text-sm md:px-16">
+  <div class="grid grid-cols-1 gap-px md:grid-cols-2">
+    <div class="bg-stone-100 py-8">
       <ul class="flex flex-col gap-2">
         <li>
           Software engineer at
@@ -30,7 +28,7 @@
         <li>B.S. in Electrical Engineering</li>
       </ul>
     </div>
-    <div class="bg-stone-100 px-8 py-8 text-sm md:px-16">
+    <div class="bg-stone-100 py-8">
       <ul class="flex flex-col gap-4">
         <li>
           <a
@@ -62,9 +60,7 @@
       </ul>
     </div>
   </div>
-  <div
-    class="border-b border-stone-500 px-8 py-8 font-mono text-sm text-stone-700 italic md:px-16"
-  >
+  <div class="py-8 text-center font-mono text-stone-700 italic">
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
       <a
         href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}"

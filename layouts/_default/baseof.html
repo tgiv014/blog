@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-  <body class="w-full bg-stone-100 text-stone-900 antialiased">
+  <body class="w-full bg-stone-100 font-mono text-stone-900 antialiased">
     <div
-      class="mx-auto flex min-h-screen flex-col items-center border-x border-stone-500 bg-stone-100 md:max-w-4xl"
+      class="mx-auto flex min-h-screen flex-col items-center bg-stone-100 px-4 md:max-w-3xl"
     >
       {{- partial "dev/dev-tools.html" . -}}
       {{- partial "header.html" . -}}
