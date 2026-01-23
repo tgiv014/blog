@@ -1,2 +1,4 @@
 github.com/jpanther/congo v1.5.3 h1:LBmLn+XnA1fG3GpT10m/0VSzkInzw3mpHD2wvRDwYNU=
 github.com/jpanther/congo v1.5.3/go.mod h1:fFwW7KKbofyaZgwLJdh6h1L51UZrSyymQgk31rclcuQ=
+github.com/twbs/icons v1.13.1 h1:6bmNXvoeIbvjFWjfbjXg5JGbelLD1haIsMaEIzE9UZI=
+github.com/twbs/icons v1.13.1/go.mod h1:GnRlymgVWp5iVJCMa0Me5b6tFyGpVc2bSxPMRGIJmyA=

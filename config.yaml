@@ -34,9 +34,16 @@ module:
   mounts:
     - source: assets
       target: assets
+    - source: icons
+      target: assets/icons
     - disableWatch: true
       source: hugo_stats.json
       target: assets/notwatching/hugo_stats.json
+  imports:
+    - path: github.com/twbs/icons
+      mounts:
+        - source: icons
+          target: assets/icons/bootstrap
 
 security:
   funcs:

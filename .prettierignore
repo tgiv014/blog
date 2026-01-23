@@ -4,3 +4,4 @@ resources
 .git
 package-lock.json
 go.sum
+layouts/index.json

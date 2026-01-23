@@ -1,13 +1,18 @@
-{{- $fname:=print "icons/" .icon ".svg" -}}
+{{- $name := .icon -}}
+{{- $res := resources.Get (printf "icons/bootstrap/%s.svg" $name) -}}
 
-{{- $file:=(readFile $fname) -}}
+{{- if $res -}}
+  {{- $file := $res.Content -}}
 
-{{- $path:="<path" -}}
-{{- $pathfill:="<path fill=\"currentColor\"" -}}
-{{- $file:=replace $file $path $pathfill -}}
+  {{- $path := "<path" -}}
+  {{- $pathfill := "<path fill=\"currentColor\"" -}}
+  {{- $file := replace $file $path $pathfill -}}
 
-{{- $svg:="<svg" -}}
-{{- $svgfill:=print "<svg class=\"inline-block align-middle " .classes "\"" -}}
-{{- $file:=replace $file $svg $svgfill -}}
+  {{- $svg := "<svg" -}}
+  {{- $svgfill := printf "<svg class=\"inline-block align-middle %s\"" .classes -}}
+  {{- $file := replace $file $svg $svgfill -}}
 
-{{ $file | safeHTML }}
+  {{ $file | safeHTML }}
+{{- else -}}
+  {{- warnf "Icon not found: %s" $name -}}
+{{- end -}}
