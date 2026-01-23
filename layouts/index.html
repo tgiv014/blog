@@ -1,21 +1,22 @@
 {{ define "main" }}
-  {{ $built := resources.Get "ts/waves.ts" | js.Build "waves.js" }}
+  {{ $opts := dict "loaders" (dict ".glsl" "text") }}
+  {{ $built := resources.Get "ts/waves.ts" | js.Build $opts }}
   <script src="{{ $built.RelPermalink }}" async></script>
   <div
-    class="text-2xl text-amber-50 relative h-48 overflow-hidden border-b border-stone-500 bg-blue-900 opsz-display font-semibold"
+    class="opsz-display relative h-48 overflow-hidden border-b border-stone-500 bg-blue-900 text-2xl font-semibold text-amber-50"
   >
     <canvas id="herocanvas" class="absolute h-full w-full"> </canvas>
-    <div class="absolute top-8 inset-x-8 md:inset-x-16">
+    <div class="absolute inset-x-8 top-8 md:inset-x-16">
       <h1 class="">Thomas Gorham</h1>
     </div>
-    <div class="absolute bottom-8 inset-x-8 md:inset-x-16 text-right">
+    <div class="absolute inset-x-8 bottom-8 text-right md:inset-x-16">
       <p>Software, Hardware Engineer</p>
     </div>
   </div>
   <div
-    class="bg-stone-500 grid grid-cols-1 md:grid-cols-2 gap-px border-b border-stone-500"
+    class="grid grid-cols-1 gap-px border-b border-stone-500 bg-stone-500 md:grid-cols-2"
   >
-    <div class="text-sm bg-stone-100 py-8 px-8 md:px-16">
+    <div class="bg-stone-100 px-8 py-8 text-sm md:px-16">
       <ul class="flex flex-col gap-2">
         <li>
           Software engineer at
@@ -29,7 +30,7 @@
         <li>B.S. in Electrical Engineering</li>
       </ul>
     </div>
-    <div class="text-sm bg-stone-100 py-8 px-8 md:px-16">
+    <div class="bg-stone-100 px-8 py-8 text-sm md:px-16">
       <ul class="flex flex-col gap-4">
         <li>
           <a
@@ -62,7 +63,7 @@
     </div>
   </div>
   <div
-    class="text-sm border-stone-500 text-stone-700 border-b px-8 md:px-16 py-8 font-mono italic"
+    class="border-b border-stone-500 px-8 py-8 font-mono text-sm text-stone-700 italic md:px-16"
   >
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
       <a

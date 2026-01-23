@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
-import vertex from "./vertex";
-import fragment from "./fragment";
+import vertex from "../shaders/vertex.glsl";
+import fragment from "../shaders/fragment.glsl";
 
 const scene = new THREE.Scene();
 const camera = new THREE.OrthographicCamera(0, 1, 1, 0, -1000, 1000);

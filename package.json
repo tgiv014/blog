@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"**/*.{html,md,css,js,ts,json}\""
+    "format": "prettier --write \"**/*.{html,md,css,js,ts,json,glsl,frag,vert}\""
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
     "@tailwindcss/typography": "^0.5.19",
     "@types/three": "^0.155.0",
     "prettier": "^3.8.1",
+    "prettier-plugin-glsl": "^0.2.3",
     "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18"
   },
   "dependencies": {

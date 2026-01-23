@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-  <body class="antialiased bg-stone-100 w-full text-stone-900">
+  <body class="w-full bg-stone-100 text-stone-900 antialiased">
     <div
-      class="bg-stone-100 flex flex-col items-center min-h-screen mx-auto md:max-w-4xl border-x border-stone-500"
+      class="mx-auto flex min-h-screen flex-col items-center border-x border-stone-500 bg-stone-100 md:max-w-4xl"
     >
       {{- partial "dev/dev-tools.html" . -}}
       {{- partial "header.html" . -}}
 
 
-      <main class="flex-1 w-full">
+      <main class="w-full flex-1">
         {{- block "main" . }}{{- end }}
       </main>
 

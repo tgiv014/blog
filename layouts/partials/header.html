@@ -1,19 +1,19 @@
-<header class="text-sm w-full px-8 md:px-16 border-b border-stone-500">
+<header class="w-full border-b border-stone-500 px-8 text-sm md:px-16">
   {{/* CSS functionality for menu toggle */}}
-  <nav class="relative flex items-end justify-between flex-wrap py-4">
+  <nav class="relative flex flex-wrap items-end justify-between py-4">
     <a
       href="{{ .Site.Home.Permalink }}"
-      class="flex items-center hover:text-sky-700 font-bold"
+      class="flex items-center font-bold hover:text-sky-700"
     >
-      <span class="font-mono italic text-2xl tracking-tighter">mntn.dev</span>
+      <span class="font-mono text-2xl tracking-tighter italic">mntn.dev</span>
     </a>
 
-    <ul id="nav-menu" class="flex w-full sm:w-auto mt-2 sm:mt-0 space-x-6">
+    <ul id="nav-menu" class="mt-2 flex w-full space-x-6 sm:mt-0 sm:w-auto">
       {{ with .Site.GetPage "/about" }}
         <li>
           <a
             href="{{ .Permalink }}"
-            class="hover:underline decoration-sky-700 tracking-tight"
+            class="tracking-tight decoration-sky-700 hover:underline"
             >{{ .Title }}</a
           >
         </li>
@@ -22,7 +22,7 @@
         <li>
           <a
             href="{{ .Permalink }}"
-            class="hover:underline decoration-sky-700 tracking-tight"
+            class="tracking-tight decoration-sky-700 hover:underline"
             >{{ .Title }}</a
           >
         </li>

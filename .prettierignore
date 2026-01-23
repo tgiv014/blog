@@ -1,5 +1,6 @@
-.hugo_build.lock
-public/
-.DS_Store
-node_modules/
-resources/
+node_modules
+public
+resources
+.git
+package-lock.json
+go.sum

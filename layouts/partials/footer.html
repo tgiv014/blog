@@ -1,7 +1,8 @@
 <footer
   class="relative bottom-0 w-full p-4 text-center font-mono text-stone-500"
 >
-  {{ $hash := "" }} {{ $short := "" }}
+  {{ $hash := "" }}
+  {{ $short := "" }}
   {{ $cfHash := os.Getenv
     "CF_PAGES_COMMIT_SHA"
   }}
@@ -11,7 +12,8 @@
       substr $cfHash 0 7
     }}
   {{ else if .GitInfo }}
-    {{ $hash = .GitInfo.Hash }} {{ $short = .GitInfo.AbbreviatedHash }}
+    {{ $hash = .GitInfo.Hash }}
+    {{ $short = .GitInfo.AbbreviatedHash }}
   {{ end }}
 
 

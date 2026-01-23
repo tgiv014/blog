@@ -29,5 +29,5 @@
 }
 
 @utility prose-article {
-  @apply max-w-none prose prose-sm prose-stone prose-pre:px-8 prose-pre:-mx-8 md:prose-pre:px-16 md:prose-pre:-mx-16 prose-pre:rounded-none prose-blockquote:border-l-8 md:prose-blockquote:border-l-16 prose-img:mx-auto prose-figcaption:text-center hover:prose-a:decoration-sky-700;
+  @apply prose prose-sm prose-stone prose-pre:px-8 prose-pre:-mx-8 md:prose-pre:px-16 md:prose-pre:-mx-16 prose-pre:rounded-none prose-blockquote:border-l-8 md:prose-blockquote:border-l-16 prose-img:mx-auto prose-figcaption:text-center hover:prose-a:decoration-sky-700 max-w-none;
 }

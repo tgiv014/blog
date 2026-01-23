@@ -1,13 +1,13 @@
 {{ define "main" }}
-  <div class="py-4 text-sm px-8 md:px-16 border-b border-stone-500">
+  <div class="border-b border-stone-500 px-8 py-4 text-sm md:px-16">
     {{ range .Pages }}
       <article class="py-4">
-        <h1 class="text-2xl opsz-display font-bold">
+        <h1 class="opsz-display text-2xl font-bold">
           <a class="no-underline hover:underline" href="{{ .Permalink }}"
             >{{ .Title }}</a
           >
         </h1>
-        <h2 class="text-stone-500 mb-2 font-mono">
+        <h2 class="mb-2 font-mono text-stone-500">
           {{ .Date.Format "January 2, 2006" }}
         </h2>
         <div class="indent-2">
