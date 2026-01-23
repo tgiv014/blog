@@ -10,21 +10,22 @@
 
     <ul id="nav-menu" class="flex w-full sm:w-auto mt-2 sm:mt-0 space-x-6">
       {{ with .Site.GetPage "/about" }}
-      <li>
-        <a
-          href="{{ .Permalink }}"
-          class="hover:underline decoration-sky-700 tracking-tight"
-          >{{ .Title }}</a
-        >
-      </li>
-      {{ end }} {{ range .Site.Sections }}
-      <li>
-        <a
-          href="{{ .Permalink }}"
-          class="hover:underline decoration-sky-700 tracking-tight"
-          >{{ .Title }}</a
-        >
-      </li>
+        <li>
+          <a
+            href="{{ .Permalink }}"
+            class="hover:underline decoration-sky-700 tracking-tight"
+            >{{ .Title }}</a
+          >
+        </li>
+      {{ end }}
+      {{ range .Site.Sections }}
+        <li>
+          <a
+            href="{{ .Permalink }}"
+            class="hover:underline decoration-sky-700 tracking-tight"
+            >{{ .Title }}</a
+          >
+        </li>
       {{ end }}
     </ul>
   </nav>

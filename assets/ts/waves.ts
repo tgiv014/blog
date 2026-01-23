@@ -34,7 +34,7 @@ const canvasResized = (width: number, height: number) => {
     width,
     height,
     widthSegments,
-    heightSegments
+    heightSegments,
   );
   plane.geometry = geometry;
 

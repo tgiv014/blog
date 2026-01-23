@@ -1,20 +1,31 @@
 <footer
   class="relative bottom-0 w-full p-4 text-center font-mono text-stone-500"
 >
-  {{ $hash := "" }} {{ $short := "" }} {{ $cfHash := os.Getenv
-  "CF_PAGES_COMMIT_SHA" }} {{ if $cfHash }} {{ $hash = $cfHash }} {{ $short =
-  substr $cfHash 0 7 }} {{ else if .GitInfo }} {{ $hash = .GitInfo.Hash }} {{
-  $short = .GitInfo.AbbreviatedHash }} {{ end }}
+  {{ $hash := "" }} {{ $short := "" }}
+  {{ $cfHash := os.Getenv
+    "CF_PAGES_COMMIT_SHA"
+  }}
+  {{ if $cfHash }}
+    {{ $hash = $cfHash }}
+    {{ $short =
+      substr $cfHash 0 7
+    }}
+  {{ else if .GitInfo }}
+    {{ $hash = .GitInfo.Hash }} {{ $short = .GitInfo.AbbreviatedHash }}
+  {{ end }}
+
 
   <p class="text-sm">
-    © 2026 Thomas Gorham {{ if $hash }} |
-    <a
-      href="https://github.com/tgiv014/blog/commit/{{ $hash }}"
-      class="hover:text-sky-700"
-      target="_blank"
-      rel="noopener"
-      >{{ $short }}</a
-    >
+    © 2026 Thomas Gorham
+    {{ if $hash }}
+      |
+      <a
+        href="https://github.com/tgiv014/blog/commit/{{ $hash }}"
+        class="hover:text-sky-700"
+        target="_blank"
+        rel="noopener"
+        >{{ $short }}</a
+      >
     {{ end }}
   </p>
 </footer>

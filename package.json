@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{html,md,css,js,ts,json}\""
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,8 @@
     "@tailwindcss/cli": "^4.1.18",
     "@tailwindcss/typography": "^0.5.19",
     "@types/three": "^0.155.0",
-    "prettier": "^2.8.4",
+    "prettier": "^3.8.1",
+    "prettier-plugin-go-template": "^0.0.15",
     "tailwindcss": "^4.1.18"
   },
   "dependencies": {
