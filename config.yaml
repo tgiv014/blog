@@ -17,6 +17,8 @@ outputs:
     - RSS
     - JSON # is necessary
 
+enableGitInfo: true
+
 markup:
   highlight:
     style: gruvbox
@@ -35,3 +37,10 @@ module:
     - disableWatch: true
       source: hugo_stats.json
       target: assets/notwatching/hugo_stats.json
+
+security:
+  funcs:
+    getenv:
+      - "^HUGO_"
+      - "^CI$"
+      - "^CF_PAGES_COMMIT_SHA$"
