@@ -3,9 +3,10 @@
   {{ range .Pages }}
   <article class="py-4">
     <h1 class="text-2xl opsz-display font-bold">
-      <a class="no-underline hover:underline" href="{{ .Permalink }}">{{ .Title }}</a>
+      <a class="no-underline hover:underline" href="{{ .Permalink }}"
+        >{{ .Title }}</a
+      >
     </h1>
-    <!-- text-2xl text-amber-50 relative h-48 overflow-hidden border-b border-stone-500 bg-blue-900 opsz-display font-semibold -->
     <h2 class="text-stone-500 mb-2 font-mono">
       {{ .Date.Format "January 2, 2006" }}
     </h2>
