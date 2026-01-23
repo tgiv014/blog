@@ -1,6 +1,7 @@
 baseURL: "https://mntn.dev/"
 title: mntn.dev
-paginate: 5
+pagination:
+  pagerSize: 5
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -19,3 +20,18 @@ outputs:
 markup:
   highlight:
     style: gruvbox
+
+build:
+  buildStats:
+    enable: true
+  cachebusters:
+    - source: "assets/notwatching/hugo_stats\\.json"
+      target: "css"
+
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - disableWatch: true
+      source: hugo_stats.json
+      target: assets/notwatching/hugo_stats.json

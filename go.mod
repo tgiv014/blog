@@ -1,5 +1,5 @@
 module github.com/tgiv014/blog
 
-go 1.17
+go 1.22
 
-require github.com/jpanther/congo v1.5.3 // indirect
+

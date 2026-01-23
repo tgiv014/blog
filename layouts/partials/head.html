@@ -19,5 +19,7 @@
     <meta name="author" content="{{ .Params.Author }}" />
   {{ end -}}
   {{ hugo.Generator }}
-  {{ partialCached "css.html" . }}
+  {{ with (templates.Defer (dict "key" "global")) }}
+    {{ partial "css.html" . }}
+  {{ end }}
 </head>

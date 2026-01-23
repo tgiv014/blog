@@ -1,10 +1,15 @@
 <link rel="preconnect" href="https://rsms.me/" />
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
-{{- $styles := resources.Get "styles.css" | postCSS -}}
-{{- if .Site.IsServer }}
-  {{ $styles = $styles | resources.ExecuteAsTemplate (printf "styles.dev.%v.css" now.UnixMilli) . }}
-{{ else }}
-  {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
-{{ end -}}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+{{- with resources.Get "styles.css" -}}
+  {{- $opts := dict "minify" (not hugo.IsDevelopment) -}}
+  {{- with . | css.TailwindCSS $opts -}}
+    {{- if hugo.IsDevelopment -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else -}}
+      {{- with . | fingerprint -}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

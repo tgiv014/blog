@@ -1,8 +1,14 @@
-@import "/assets/berkeley_mono.css";
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@source "notwatching/hugo_stats.json";
+
+@theme {
+  --font-mono: "Berkeley Mono", monospace;
+  --font-sans: "InterVariable", sans-serif;
+}
+
+@import "./berkeley_mono.css";
 
 .opsz-display {
   font-variation-settings: "opsz" 32;
@@ -12,4 +18,12 @@
   color: #1c1917;
   background: #fbbf24;
   text-decoration-color: #1c1917;
+}
+
+/* Prose overrides to match previous config */
+@utility prose-sm {
+  pre,
+  code {
+    font-size: 0.875rem;
+  }
 }
