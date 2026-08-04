@@ -31,6 +31,9 @@ build:
       target: "css"
 
 module:
+  hugoVersion:
+    min: "0.164.0"
+    extended: true
   mounts:
     - source: assets
       target: assets
