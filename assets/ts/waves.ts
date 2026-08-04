@@ -12,6 +12,7 @@ const renderer = new THREE.WebGLRenderer({ canvas: canvasElem });
 
 let geometry = new THREE.PlaneGeometry(1, 1, 2, 2);
 const material = new THREE.ShaderMaterial({
+  glslVersion: THREE.GLSL3,
   uniforms: {
     time: { value: 0 },
     width: { value: 1 },

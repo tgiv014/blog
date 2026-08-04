@@ -18,16 +18,16 @@
   },
   "homepage": "https://github.com/tgiv014/blog#readme",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.18",
-    "@tailwindcss/typography": "^0.5.19",
-    "@types/three": "^0.155.0",
-    "prettier": "^3.8.1",
-    "prettier-plugin-glsl": "^0.2.3",
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/three": "^0.185.3",
+    "prettier": "^3.9.6",
+    "prettier-plugin-glsl": "^0.3.1",
     "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^4.1.18"
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3"
   },
   "dependencies": {
-    "three": "^0.155.0"
+    "three": "^0.185.1"
   }
 }
