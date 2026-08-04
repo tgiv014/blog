@@ -1,5 +1,6 @@
 uniform float time;
-varying vec3 v_color;
+in vec3 v_color;
+out vec4 fragColor;
 
 //	Simplex 3D Noise
 //	by Ian McEwan, Ashima Arts
@@ -95,7 +96,7 @@ void main() {
     vec3(gl_FragCoord.x, 91.5 * gl_FragCoord.y, time * 40.0)
   );
   float alpha_fade = min(1.0, time * 40.0);
-  gl_FragColor = vec4(
+  fragColor = vec4(
     v_color + 0.05 * vec3(bw_noise),
     1.0 - (1.0 - alpha_fade) * (1.0 - alpha_fade)
   );
