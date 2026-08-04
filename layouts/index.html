@@ -60,13 +60,4 @@
       </ul>
     </div>
   </div>
-  <div class="py-8 text-center font-mono text-stone-700 italic">
-    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-      <a
-        href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}"
-        class="hover:text-sky-700"
-        >{{ $name }}</a
-      >
-    {{ end }}
-  </div>
 {{ end }}
