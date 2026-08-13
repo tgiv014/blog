@@ -1,0 +1,371 @@
+{{ define "main" }}
+  <article
+    class="mt-4 pb-12 print:mt-0 print:pb-0 print:text-sm print:leading-tight"
+  >
+    <div class="flex flex-wrap items-start justify-between gap-4 lg:py-4">
+      <div>
+        <h1 class="opsz-display text-3xl font-bold print:text-2xl">
+          Thomas Gorham
+        </h1>
+        <h2 class="mt-1 text-stone-500">Software & Hardware Engineer</h2>
+      </div>
+
+      <button
+        type="button"
+        onclick="window.print()"
+        class="flex items-center gap-2 border border-stone-400 px-3 py-1.5 text-sm text-stone-600 hover:border-sky-700 hover:text-sky-700 print:hidden"
+      >
+        {{ partial "icon.html" (dict "icon" "printer" "classes" "h-4") }}
+        Print / Save as PDF
+      </button>
+    </div>
+
+    <ul
+      class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone-600 print:mt-2 print:gap-y-1"
+    >
+      <li class="flex items-center gap-2">
+        {{ partial "icon.html" (dict "icon" "envelope" "classes" "h-4") }}
+        <a href="mailto:tom@mntn.dev" class="hover:text-sky-700"
+          >tom@mntn.dev</a
+        >
+      </li>
+      <li class="flex items-center gap-2">
+        {{ partial "icon.html" (dict "icon" "geo-alt" "classes" "h-4") }}
+        <span>Boulder, CO</span>
+      </li>
+      <li class="flex items-center gap-2">
+        {{ partial "icon.html" (dict "icon" "globe" "classes" "h-4") }}
+        <a href="https://mntn.dev" class="hover:text-sky-700">mntn.dev</a>
+      </li>
+      <li class="flex items-center gap-2">
+        {{ partial "icon.html" (dict "icon" "linkedin" "classes" "h-4") }}
+        <a
+          href="https://www.linkedin.com/in/thomas-gorham/"
+          class="hover:text-sky-700"
+          target="_blank"
+          rel="noopener"
+          >thomas-gorham</a
+        >
+      </li>
+      <li class="flex items-center gap-2">
+        {{ partial "icon.html" (dict "icon" "github" "classes" "h-4") }}
+        <a
+          href="https://www.github.com/tgorham4"
+          class="hover:text-sky-700"
+          target="_blank"
+          rel="noopener"
+          >tgorham4</a
+        >
+      </li>
+    </ul>
+
+    {{/* Objective */}}
+    <section class="mt-8 print:mt-3">
+      <h3
+        class="border-b border-stone-400 pb-1 text-lg font-bold text-stone-700 print:pb-0.5 print:text-base"
+      >
+        Objective
+      </h3>
+      <p class="mt-3 text-stone-700 print:mt-1">
+        To build essential products and processes that empower their users to
+        work and live more meaningfully and effectively.
+      </p>
+    </section>
+
+    {{/* Experience */}}
+    <section class="mt-8 print:mt-3">
+      <h3
+        class="border-b border-stone-400 pb-1 text-lg font-bold text-stone-700 print:pb-0.5 print:text-base"
+      >
+        Experience
+      </h3>
+
+      <div class="mt-4 flex flex-col gap-6 print:mt-1.5 print:gap-2">
+        {{/* Convictional */}}
+        <div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+            <p class="font-bold text-stone-800">
+              <a
+                href="http://www.convictional.com"
+                class="text-sky-700 hover:text-sky-900"
+                target="_blank"
+                rel="noopener"
+                >Convictional</a
+              >
+            </p>
+            <p class="text-sm whitespace-nowrap text-stone-500">Remote</p>
+          </div>
+
+          <div
+            class="mt-3 flex flex-col gap-4 border-l-2 border-stone-300 pl-4 print:mt-1 print:gap-1.5"
+          >
+            <div>
+              <div
+                class="flex flex-wrap items-baseline justify-between gap-x-4"
+              >
+                <p class="font-semibold text-stone-800">Software Engineer</p>
+                <p class="text-sm whitespace-nowrap text-stone-500">
+                  Apr 2021 &ndash; Aug 2026
+                </p>
+              </div>
+              <p class="text-sm text-stone-500">
+                Billing, Platform, Infra, Security
+              </p>
+              <ul
+                class="mt-2 list-disc space-y-1 pl-5 text-stone-700 print:mt-1 print:space-y-0"
+              >
+                <li>
+                  Built and maintained Stripe billing systems scaled to
+                  thousands of customers.
+                </li>
+                <li>
+                  Designed and maintained a horizontally scalable realtime
+                  collaborative document editing system backed by CRDTs
+                  (Prosemirror & Yjs).
+                </li>
+                <li>
+                  Represented engineering and served as security officer through
+                  two years of SOC 2 certification.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {{/* Garmin International */}}
+        <div>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+            <p class="font-bold text-stone-800">
+              <a
+                href="https://www.garmin.com"
+                class="text-sky-700 hover:text-sky-900"
+                target="_blank"
+                rel="noopener"
+                >Garmin Intl.</a
+              >
+            </p>
+            <p class="text-sm whitespace-nowrap text-stone-500">Olathe, KS</p>
+          </div>
+
+          <div
+            class="mt-3 flex flex-col gap-4 border-l-2 border-stone-300 pl-4 print:mt-1 print:gap-1.5"
+          >
+            <div>
+              <div
+                class="flex flex-wrap items-baseline justify-between gap-x-4"
+              >
+                <p class="font-semibold text-stone-800">
+                  Design Engineer II / Project Engineer
+                </p>
+                <p class="text-sm whitespace-nowrap text-stone-500">
+                  May 2018 &ndash; Apr 2021
+                </p>
+              </div>
+              <ul
+                class="mt-2 list-disc space-y-1 pl-5 text-stone-700 print:mt-1 print:space-y-0"
+              >
+                <li>
+                  Led electrical design of a Yocto Linux and FPGA-powered marine
+                  radar, including the memory-mapped VHDL processing system, on
+                  the Xilinx Zynq platform.
+                </li>
+                <li>
+                  Led a cross-functional team delivering the marine industry's
+                  first L1/L5 band GPS sensor, from design through manufacture.
+                </li>
+                <li>
+                  Built automated hardware test systems in Python (GPIB, SCPI,
+                  UDP) to speed up development and standardize testing
+                  practices.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div
+                class="flex flex-wrap items-baseline justify-between gap-x-4"
+              >
+                <p class="font-semibold text-stone-800">
+                  Design & Software Engineering Intern &ndash; Marine & Aviation
+                </p>
+                <p class="text-sm whitespace-nowrap text-stone-500">
+                  May 2016 &ndash; May 2018
+                </p>
+              </div>
+              <ul
+                class="mt-2 list-disc space-y-1 pl-5 text-stone-700 print:mt-1 print:space-y-0"
+              >
+                <li>
+                  Designed embedded hardware and firmware across marine
+                  (Bluetooth HID, FPGA radar control) and aviation (certified
+                  audio processing) product lines.
+                </li>
+                <li>
+                  Built Python and VHDL test tooling to validate hardware and
+                  firmware functionality.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{/* Skills */}}
+    <section class="mt-8 print:mt-3">
+      <h3
+        class="border-b border-stone-400 pb-1 text-lg font-bold text-stone-700 print:pb-0.5 print:text-base"
+      >
+        Skills
+      </h3>
+
+      <div class="mt-4 flex flex-col gap-3 print:mt-1.5 print:gap-1">
+        <div
+          class="grid grid-cols-1 items-start gap-x-2 gap-y-1 sm:grid-cols-[9rem_1fr]"
+        >
+          <p class="text-sm text-stone-500">Languages</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >C</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Python</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >JavaScript</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >TypeScript</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Go</span
+            >
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 items-start gap-x-2 gap-y-1 sm:grid-cols-[9rem_1fr]"
+        >
+          <p class="text-sm text-stone-500">Technologies</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >React</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Stripe</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >CRDTs</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >ProseMirror</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Yjs</span
+            >
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 items-start gap-x-2 gap-y-1 sm:grid-cols-[9rem_1fr]"
+        >
+          <p class="text-sm text-stone-500">Hardware &amp; EDA</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Verilog</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >VHDL</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >FPGA</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >AutoCAD</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >OnShape</span
+            ><span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >KiCad</span
+            >
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 items-start gap-x-2 gap-y-1 sm:grid-cols-[9rem_1fr]"
+        >
+          <p class="text-sm text-stone-500">Systems &amp; Tools</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Linux</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Docker</span
+            >
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 items-start gap-x-2 gap-y-1 sm:grid-cols-[9rem_1fr]"
+        >
+          <p class="text-sm text-stone-500">Strengths</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Systems Engineering</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Individual Contributor</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Communication</span
+            >
+            <span
+              class="border border-stone-400 px-2 py-0.5 text-sm whitespace-nowrap"
+              >Self-Directed Learning</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{/* Education */}}
+    <section class="mt-8 print:mt-3">
+      <h3
+        class="border-b border-stone-400 pb-1 text-lg font-bold text-stone-700 print:pb-0.5 print:text-base"
+      >
+        Education
+      </h3>
+
+      <div class="mt-4 print:mt-1.5">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+          <p class="font-bold text-stone-800">
+            Kansas State University &middot; B.S. in Electrical Engineering
+          </p>
+          <p class="text-sm whitespace-nowrap text-stone-500">
+            Graduated May 2018
+          </p>
+        </div>
+        <p class="text-sm text-stone-500">
+          Specialization: Communication Systems and Design
+        </p>
+      </div>
+    </section>
+  </article>
+{{ end }}

@@ -49,6 +49,14 @@ module:
           target: assets/icons/bootstrap
 
 security:
+  exec:
+    allow:
+      - "^(dart-)?sass$"
+      - "^go$"
+      - "^git$"
+      - "^node$"
+      - "^postcss$"
+      - "^tailwindcss$"
   funcs:
     getenv:
       - "^HUGO_"

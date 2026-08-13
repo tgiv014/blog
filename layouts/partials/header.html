@@ -1,4 +1,4 @@
-<header class="w-full">
+<header class="w-full print:hidden">
   {{/* CSS functionality for menu toggle */}}
   <nav class="relative flex flex-wrap items-end justify-between py-4">
     <a
@@ -10,6 +10,15 @@
 
     <ul id="nav-menu" class="mt-2 flex w-full space-x-6 sm:mt-0 sm:w-auto">
       {{ with .Site.GetPage "/about" }}
+        <li>
+          <a
+            href="{{ .Permalink }}"
+            class="tracking-tight decoration-sky-700 hover:underline"
+            >{{ .Title }}</a
+          >
+        </li>
+      {{ end }}
+      {{ with .Site.GetPage "/resume" }}
         <li>
           <a
             href="{{ .Permalink }}"

@@ -14,6 +14,13 @@
   font-variation-settings: "opsz" 32;
 }
 
+@media print {
+  @page {
+    size: letter;
+    margin: 0.3in;
+  }
+}
+
 /* Prose overrides to match previous config */
 
 @utility prose-article {
